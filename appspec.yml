@@ -2,10 +2,12 @@ version: 0.0
 os: linux
 files:
    - source: /
-     destination: /srv/iv/html
+     destination: /srv/iv/
+     owner: ubuntu
+     mode: 755
 hooks:
    BeforeInstall:
-    - location: scripts/install_nginx.sh
+    - location: scripts/say_sup.sh
       runas: root
    AfterInstall:
     - location: scripts/restart_nginx.sh
