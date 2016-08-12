@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+   - source: /
+     destination: /srv/iv/html
+hooks:
+   BeforeInstall:
+    - location: scripts/install_nginx.sh
+      runas: root
+   AfterInstall:
+    - location: scripts/restart_nginx.sh
+      runas: root
