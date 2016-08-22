@@ -1,0 +1,55 @@
+body{
+  background: url(../images/back_registro.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.conten_reg{
+	
+	background-color: #222222;
+	min-height: 300px;
+	margin-top: 10vh;
+	border-radius: 8px;
+
+}
+
+.foto{
+	padding: 20px;
+	padding-top: 40px;
+}
+
+.saludo{
+	padding: 10px;
+	color: #E8DFE3;
+	letter-spacing: 1px;
+}
+
+.alerto{
+	background-color: red;
+	position: absolute;
+	left: 60%;
+	top: 2em;
+	border-radius: 20px;
+	padding-top: 4px;
+	height: 30px;
+	width: 30px;
+}
+.circle{
+	margin-left: 10%;
+	height: 60px;
+	width: 60px;
+	background-color: #f3f3f3;
+	border-radius: 50%;
+
+}
+
+.process{
+	display: flex;
+	padding-left: 22%;
+}
+
+hr{
+	border-top: 1px solid #000;
+}
