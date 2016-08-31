@@ -1,0 +1,50 @@
+<section id="equipo" ng-controller="equipoCrl as equipo">
+  <header class="col-xs-12">
+    <h2 class="col-xs-12 col-sm-8 col-sm-offset-2"><span>EQUIPO</span></h2>
+    <h4 class="col-xs-12 col-sm-8 col-sm-offset-2">Conoce a parte de nuestro equipo.</h4>
+  </header>
+  <div class="nosotrosSeccion col-xs-12">
+    <div class="equipoPestanas col-xs-12">
+      <a class="col-xs-12 col-sm-2 col-sm-offset-3 equipoPestanas_button" href="">Equipo Organizador</a>
+      <a class="col-xs-12 col-sm-2 equipoPestanas_button" href="">Jueces</a>
+      <a class="col-xs-12 col-sm-2 equipoPestanas_button" href="">Mentores</a>
+    </div>
+    <h3 class="equipoSubtitulo col-xs-12">EQUIPO ORGANIZADOR</h3>
+    <div class="cardDeck col-xs-12 col-sm-10 col-sm-offset-1">
+        <a class="equipoCard col-xs-12 col-sm-3" ng-repeat="integrante in equipo.integrantes" data-toggle="modal" data-target="#{{integrante.nombre}}Modal">
+          <div class="CardFront">
+            <img ng-src="/assets/img/Perfiles/{{integrante.foto}}" alt="Foto de {{integrante.nombre}}" />
+            <h4><span>{{integrante.nombre}}</span></h4>
+            <h4>{{integrante.carrera}}</h4>
+          </div>
+
+        </a>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="{{integrante.nombre}}Modal" tabindex="-1" role="dialog" aria-labelledby="{{integrante.nombre}}Label" ng-repeat="integrante in equipo.integrantes">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>s
+          </div>
+          <div class="modal-body modalEquipo">
+            <article class="modalMedalla">
+              <img ng-src="/assets/img/Perfiles/{{integrante.foto}}" alt="Foto de {{integrante.nombre}}" />
+              <h4><span>{{integrante.nombreCompleto}}</span></h4>
+              <h4>{{integrante.carrera}}</h4>
+              <a href="https://twitter.com/{{integrante.twitter}}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </article>
+            <article class="modalInfo">
+              <h2><span>EQUIPO ORGANIZADOR</span></h2>
+              <h3>{{integrante.subtitulo}}</h3>
+              <h4>{{integrante.descripcionCorta}}</h4>
+              <p>{{integrante.descripcion}}</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>

@@ -1,0 +1,25 @@
+#acercade {
+    padding-top: 40px;
+    background-image: url(../img/pantallas/acerca.png);
+    background-size: cover;
+    background-position: bottom;
+    padding-bottom: 115px;
+    width: 100%;
+    min-height: auto;
+    display: block;
+}
+#acercade header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+#acercade header h4 {
+  margin-top: -10px;
+}
+#acercade main p {
+  text-align: justify;
+}
+.lineaTitulo {
+  border: 3px solid #F40C5A;
+  border-radius: 50%;
+  height: 1px;
+}

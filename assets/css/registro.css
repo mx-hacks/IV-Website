@@ -1,0 +1,278 @@
+.bd{
+  background: url(../img/registro/back_registro.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+.non span{
+	    font-size: 27px;
+    padding-top: 1em;
+}
+
+span{
+	    color: #3c3034;
+}
+.form-control{
+	border:0px;
+}
+
+.registro{
+	padding-bottom: 60px;
+}
+
+.conten_reg{
+	
+	background-color: #222222;
+	min-height: 300px;
+	margin-top: 10vh;
+	border-radius: 8px 8px 0 0;
+
+}
+
+.input-lg{
+	    border-radius: 3px;
+}
+
+.first-side{
+	margin-bottom: 30px;
+}
+
+.foto{
+	padding: 20px;
+	padding-top: 40px;
+	    padding-bottom: 0px;
+}
+
+.saludo{
+	padding: 10px;
+	color: #E8DFE3;
+	letter-spacing: 1px;
+
+}
+
+.alerto{
+	background-color: red;
+	position: absolute;
+	left: 60%;
+	top: 2em;
+	border-radius: 20px;
+	padding-top: 4px;
+	height: 30px;
+	width: 30px;
+}
+.circle{
+	margin-left: 10%;
+	height: 60px;
+	width: 60px;
+	background-color: #f3f3f3;
+	border-radius: 50%;
+
+}
+
+.process{
+    height: 10px;
+    display: flex;
+    padding-left: 22%;
+}
+
+.fix_height{
+	    height: 50px !important;
+}
+
+hr{
+	border-top: 1px solid #000;
+}
+
+
+.circle img{
+	
+	margin-top: .6em;
+	
+}
+
+.exclam{
+	color: #f3f3f3;
+	letter-spacing: 1px;
+}
+
+.message{
+	background-color: #f0f0f0;
+}
+/*============================= DYNAMIC */
+
+.pro_nice{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5AFF45+0,91e842+100 */
+background: #5AFF45; /* Old browsers */
+background: -moz-linear-gradient(top,  #5AFF45 0%, #00FFD7 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #5AFF45 0%,#00FFD7 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #5AFF45 0%,#00FFD7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AFF45', endColorstr='#00FFD7',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+
+.btn_siguiente{
+	cursor: pointer;
+padding-top: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    font-size: 20px;
+font-size: 20px;
+background: #5AFF45; /* Old browsers */
+background: -moz-linear-gradient(top,  #5AFF45 0%, #00FFD7 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #5AFF45 0%,#00FFD7 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #5AFF45 0%,#00FFD7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AFF45', endColorstr='#00FFD7',GradientType=0 ); /* IE6-9 */
+
+	position: absolute;
+	border-radius: 8px;
+}
+
+
+/*=============================*/
+
+/*============================= step 1*/
+
+.step1 .row{
+	    margin-bottom: 27px;
+}
+
+.step1 input, .step1 select{
+	margin-bottom: 10px;
+}
+
+.content_reg2{
+	padding-top: 30px;
+	background-color: #F0F0F0;
+	
+}
+
+.content_reg3{
+	padding-top: 10px;
+	background-color: #222222;
+	padding-bottom: 30px;
+	border-radius: 0 0 8px 8px;
+}
+
+
+.step1-5 input, .step1-5 select{
+	margin-top: 10px;
+	margin-bottom: 10px
+}
+
+
+
+
+/*============================= step 2*/
+
+.step2{
+	margin-bottom: 20px;
+}
+
+.step2 h4{
+	color: #f2f2f2;
+}
+
+.size .circle{
+	float: left;
+	height: 80px;
+	width: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+
+.size .circle:hover{
+	background: #5AFF45; /* Old browsers */
+background: -moz-linear-gradient(top,  #5AFF45 0%, #00FFD7 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #5AFF45 0%,#00FFD7 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #5AFF45 0%,#00FFD7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AFF45', endColorstr='#00FFD7',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+.specials .circle{
+	float: left;
+	height: 80px;
+	width: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+
+.specials .circle:hover{
+	background: #5AFF45; /* Old browsers */
+background: -moz-linear-gradient(top,  #5AFF45 0%, #00FFD7 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #5AFF45 0%,#00FFD7 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #5AFF45 0%,#00FFD7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AFF45', endColorstr='#00FFD7',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+/*============================= step 3*/
+
+.step3 h4{
+	color: #f2f2f2;
+}
+.l_hack .circle{
+	float: left;
+	height: 80px;
+	width: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.step4{
+	color: #F0F0F0;
+}
+
+.l_hack .circle:hover{
+	background: #5AFF45; /* Old browsers */
+background: -moz-linear-gradient(top,  #5AFF45 0%, #00FFD7 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #5AFF45 0%,#00FFD7 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #5AFF45 0%,#00FFD7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AFF45', endColorstr='#00FFD7',GradientType=0 ); /* IE6-9 */
+
+}
+.bad:hover{
+	background-color: #F40C5A !important;
+}
+/*=============================*/
+@media (max-width: 992px) {
+	.saludo{
+		text-align: center;
+	}
+
+	.process{
+		    padding-left: 18%;
+	}
+}
+
+@media (max-width: 768px) {
+	.process {
+        padding-left: 25%;
+	}
+}
+
+@media (max-width: 600px) {
+	.process{
+		    padding-left: 23%;
+	}
+}
+
+@media (max-width: 500px) {
+		.process {
+    padding-left: 5%;
+	}
+}

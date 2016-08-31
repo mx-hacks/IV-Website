@@ -1,0 +1,31 @@
+#faq {
+  background-image: url(../img/fondos/faqilustracion.svg);
+  background-size: contain;
+      padding-bottom: 39px;
+}
+#faq header {
+  text-align: center;
+     padding-top: 28px;
+}
+#faq header h2 {
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  border-bottom: 2px dotted lightgray;
+}
+#faq .faqCard {
+  /*min-height: 500px;*/
+}
+@media screen and (max-width:450px){
+  #faq .faqCard {
+    margin-top: -30px;
+  }
+}
+#faq h4 {
+  background-color: lightgray;
+  text-align: center;
+  padding: 15px;
+  margin-top: -40px;
+}
+#faq p {
+  text-align: justify;
+}

@@ -1,0 +1,237 @@
+/*.nav {
+  text-align: center;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  padding: 0;
+  z-index: 100;
+}
+.nav a{
+  padding: 0 0;
+  cursor: pointer;
+  background-color: black;
+}
+#MxLogo {
+  width: 100%;
+}
+.menu {
+  background-color: black;
+}
+.menu img {
+  padding-bottom: 10px;
+}
+.menu:hover {
+  background-color: black !important;
+}
+.navHide {
+  background-color: black;
+  width: 100%;
+  padding: 0;
+}
+.black {
+  background: black;
+}
+*/
+
+
+
+
+
+
+
+ body {
+    overflow-x: hidden;
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 80px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 80px;
+    width: 0;
+    height: 100%;
+    margin-left: -80px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 80px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -80px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 0px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+
+.menu_bars{
+  text-align: center;
+}
+
+.menu_bars img{
+  max-width: 40%;
+}
+
+.icn_c img{
+  max-height: 50px !important;
+}
+
+.sidebar_mx{
+    padding-top: 10px;  
+    max-width: 80px;
+    left: 0px;
+        padding-bottom: 6px;
+}
+.sidebar-brand{
+  background-color: black !important;
+  position: fixed;
+}
+.lines{
+
+    left: 27px;
+    /* max-height: 69px; */
+    height: 27px;
+}
+.top_fix{
+  padding-top: 60px;
+}
+.fixyy{
+      top: 65px;
+      position: fixed;
+    width: 80px;
+    background-color: black;
+        padding-bottom: 6px;
+}
+
+.tag{
+      position: fixed;
+    left: 96px;
+        margin-top: -44px;
+    background-color: #fb1855;
+    border-radius: 5px;
+    padding: 0px 26px;
+        color: #850f2f;
+        
+}
+
+.tag::after{
+    right: 100%;
+    top: 69%;
+    border: solid transparent;
+    content: " ";
+    
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-right-color: #fb1855;
+    border-width: 8px;
+    margin-top: -18px;
+}
+
+@media (max-width: 992px) {
+
+  .no-mobile{
+    display: none;
+  }
+  
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 80px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 80px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}

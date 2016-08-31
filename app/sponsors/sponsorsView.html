@@ -1,0 +1,27 @@
+<section id="sponsors" class="col-xs-12" ng-controller="sponsorsCrl as sponsors">
+  <header class="col-xs-12">
+    <h2 class="col-xs-12 col-sm-8 col-sm-offset-2"><span>Sponsors</span></h2>
+    <h4 class="col-xs-12 col-sm-6 col-sm-offset-3">MXHACKS no sería posible sin el increíble apoyo de estos organismos. Si te gustaría apoyarnos da <a href="#"><span>clic aquí</span></a>
+      
+  </header>
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 GE">
+    <img class="col-xs-12 col-md-6 col-md-offset-3" src="/assets/img/sponsors/{{sponsors.estrella}}" alt="Logo de General Electrics">
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+  <img class=" sponsorsImg col-xs-12 col-sm-4 col-sm-offset-4 " src="assets/img/sponsors/logoTec.svg" alt="">
+  </div>
+  <hr>
+  <br>
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <div class="col-md-6 patrocinador" ng-repeat="patrocinador in sponsors.patrocinadoresGold">
+      <img class="col-xs-12 col-sm-6 col-sm-offset-3 sponsorsImg" ng-src="/assets/img/sponsors/{{patrocinador.img}}" alt="{{patrocinador.name}}">
+    </div>
+    <h4 class="col-xs-12 text-center" id="aliados"><span>Aliados</span></h4>
+    <div class="col-xs-4 col-sm-3 patrocinador" ng-repeat="patrocinador in sponsors.patrocinadoresSilver">
+      <img class="col-xs-12 col-sm-6 col-sm-offset-3" ng-src="/assets/img/sponsors/{{patrocinador.img}}" alt="{{patrocinador.name}}">
+    </div>
+  </div>
+</section>

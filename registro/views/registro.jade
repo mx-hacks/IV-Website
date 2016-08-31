@@ -1,0 +1,134 @@
+extends layout
+
+block style
+	link(rel="stylesheet", href="stylesheets/registro.css")
+block content
+	.registro
+		.container
+			.col-sm-8.col-sm-offset-2.col-xs-12.conten_reg
+					.head_reg
+						.row.first-side
+							.col-md-4.foto.text-center
+								.alerto.animated.bounceIn.infinite !
+								img(src="images/hey.png", alt="")
+							.col-md-8.saludo
+								br
+								h3 ¡Hola!
+								h4 SPIDERMAN57@gmail.com
+						.row.process.text-center
+								.circle.pro_nice
+									img(src="images/chile.png", alt="")
+								.circle.dos
+									img(src="images/cafe.png", alt="")
+								.circle
+									img(src="images/nacho.png", alt="")
+						.fix_height
+							hr
+						.row
+							.col-md-12.text-center.exclam
+								br
+								p ¡Genial! , ahora porfavor rellena los siguientes datos
+								br
+					.step1.col-md-12
+						.row
+							.col-sm-4 
+								input.form-control.input-lg(placeholder="Nombre")
+							.col-sm-8 
+								input.form-control.input-lg(placeholder="Apellido(s)")
+						.row
+							.col-sm-3 
+								select.form-control.input-lg.1-100(placeholder="Edad")
+									option(value="--") Edad
+							.col-sm-3 
+								select.form-control.input-lg(placeholder="Genero")
+									option(value="chica") chica
+									option(value="chico") chico
+							.col-sm-6 
+								input.form-control.input-lg(placeholder="Teléfono")
+
+					// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+					.step2.hidden
+						.col-xs-12.text-center
+							h4 ¿Cual es tu tamaño de playera?
+						.row.size
+							.col-md-8.col-md-offset-2.col-xs-offset-1
+								.circle.text-center
+									h1 S
+								.circle.text-center
+									h1 M
+								.circle.text-center
+									h1 G
+						.col-xs-12.text-center
+							h4 ¿ Tienes alguna preferencia en la comida ?
+						.row.specials.love
+							.col-md-10.col-md-offset-3.col-xs-offset-1
+								.circle.text-center
+									h1 
+										span.glyphicon.glyphicon-ok
+								.circle.text-center.bad
+									h1 
+										span.glyphicon.glyphicon-remove
+						.row
+							.col-md-8.col-md-offset-2
+								br
+								input.form-control.input-lg(placeholder="Requerimientos especiales " disabled)
+
+					// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+					.step3.hidden
+						.col-xs-12.text-center
+							h4 ¿Haz participado en otros hacktons?
+						.row.l_hack
+							.col-md-10.col-md-offset-3.col-xs-offset-1
+								.circle.text-center
+									h1 
+										span.glyphicon.glyphicon-ok
+								.circle.text-center.bad
+									h1 
+										span.glyphicon.glyphicon-remove
+						.col-xs-12.text-center
+							h4 ¿Haz participado en otras ediciones de MXHACKS?
+						.row.l_hack
+							.col-md-8.col-md-offset-2.col-xs-offset-1
+								.circle.text-center
+									h1 I
+								.circle.text-center
+									h1 II
+								.circle.text-center
+									h1 III
+
+						.col-xs-12.text-center
+							h4 ¿Trabajas?
+						.row.l_hack
+							.col-md-10.col-md-offset-3.col-xs-offset-1
+								.circle.text-center
+									h1 
+										span.glyphicon.glyphicon-ok
+								.circle.text-center.bad
+									h1 
+										span.glyphicon.glyphicon-remove
+					// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+			.col-sm-8.col-sm-offset-2.col-xs-12.content_reg2
+					.step1-5.col-md-12.step1
+						.row
+							.col-sm-6 
+								select.form-control.input-lg(placeholder="Escuela")
+									option(value="Tec") Tec de Monterrey
+							.col-sm-5 
+								input.form-control.input-lg(placeholder="ID / Matricula")
+						.row
+							.col-sm-5 
+								input.form-control.input-lg(placeholder="Campus")
+							.col-sm-2 
+								input.form-control.input-lg(placeholder="Inicio")
+									
+							.col-sm-2 
+								input.form-control.input-lg(placeholder="Fin")
+			.col-sm-8.col-sm-offset-2.col-xs-12.content_reg3
+				.btn_siguiente.col-xs-6.col-xs-offset-3.text-center SIGUIENTE
+									
+
+
+

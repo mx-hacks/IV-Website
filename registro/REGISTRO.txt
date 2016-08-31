@@ -1,0 +1,11 @@
+------ sudo npm install
+------ npm start
+
+
+Puedes pasar el jade a html aqui: http://html2jade.org/
+
+Y en public tienes los css y los js necesarios para el registro, 
+
+Tambien inclui algunos vendors como animate.css y Janimate. 
+
+:D 

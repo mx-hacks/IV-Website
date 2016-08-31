@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MxHacks IV</title>
+  <link rel="icon" href="/assets/img/logo.svg" type="image/x-icon"/>
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="/assets/css/main.css" rel="stylesheet" >
+  <link href="/assets/css/registro.css" rel="stylesheet" >
+  <link href="/assets/vendor/animate.css" rel="stylesheet" >
+
+</head>
+<body class="bd">
+
+
+  <div class="registro">
+    <div class="container">
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12 conten_reg">
+        <div class="head_reg">
+          <div class="row first-side">
+            <div class="col-md-4 foto text-center">
+              <div class="alerto animated bounceIn infinite">!</div><img src="assets/img/registro/hey.png" alt=""/>
+            </div>
+            <div class="col-md-8 saludo"><br/>
+              <h4>¡Hola!</h4>
+              <h3 id="themail"> </h3>
+            </div>
+          </div>
+          <div class="row process text-center">
+            <div class="circle pro_nice uno"><img src="assets/img/registro/chile.png" alt=""/></div>
+            <div class="circle dos"><img src="assets/img/registro/cafe.png" alt=""/></div>
+            <div class="circle tres"><img src="assets/img/registro/nacho.png" alt=""/></div>
+          </div>
+          <div class="fix_height">
+            <hr/>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center exclam"><br/>
+              <p>Por favor selecciona las siguientes opciones:</p><br/>
+            </div>
+          </div>
+        </div>
+        <div class="step1 col-md-12">
+          <div class="row">
+            <div class="col-sm-4">
+              <input placeholder="Nombre" class="form-control input-lg name"/>
+            </div>
+            <div class="col-sm-8">
+              <input placeholder="Apellido(s)" class="form-control input-lg lastn"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <select placeholder="Edad" class="form-control input-lg 1-100 edad">
+                <option value="--">Edad</option>
+              </select>
+            </div>
+            <div class="col-sm-3">
+              <select placeholder="Genero" class="form-control input-lg genero">
+                <option value="--">Género</option>
+                <option value="masculino">Hombre</option>
+                <option value="femenino">Mujer</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <input placeholder="Teléfono" onkeypress="return event.charCode >= 48 && event.charCode <= 57" pattern="[0-9]" class="form-control input-lg telefono"/>
+            </div>
+          </div>
+        </div>
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="step2 hidden">
+          <div class="col-xs-12 text-center">
+            <h4>¿Cual es tu tamaño de playera?</h4>
+          </div>
+          <div class="row size">
+            <div class="col-md-8 col-md-offset-2 col-xs-offset-1">
+              <div class="circle text-center " size="Chica - Hombre">
+                <h1>CH</h1>
+              </div>
+              <div class="circle text-center m" size="Mediana - Hombre">
+                <h1>M</h1>
+              </div>
+              <div class="circle text-center g" size="Grande - Hombre">
+                <h1>G</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 text-center">
+            <h4>¿Tienes alguna restricción alimenticia? </h4>
+          </div>
+          <div class="row specials love">
+            <div class="col-md-10 col-md-offset-3 col-xs-offset-1">
+              <div class="circle text-center" spec="si">
+                <h1> <span class="glyphicon glyphicon-ok"></span></h1>
+              </div>
+              <div class="circle text-center bad" spec="no">
+                <h1> <span class="glyphicon glyphicon-remove"></span></h1>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2"><br/>
+              <input placeholder="Escríbelos aquí" disabled="disabled" class="form-control input-lg specs"/>
+            </div>
+          </div>
+        </div>
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="step3 hidden">
+          <div class="col-xs-12 text-center inst">
+            <h4>¿Haz participado en otros hackathons?</h4>
+          </div>
+          <div class="row l_hack l_1">
+            <div class="col-md-10 col-md-offset-3 col-xs-offset-1">
+              <div class="circle text-center" ex="true">
+                <h1> <span class="glyphicon glyphicon-ok"></span></h1>
+              </div>
+              <div class="circle text-center bad" ex="false">
+                <h1> <span class="glyphicon glyphicon-remove"></span></h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 text-center">
+            <h4>Si haz participado en otras ediciones de Mx Hacks por favor selecciona en cual: </h4>
+          </div>
+          <div class="row l_hack">
+            <div class="col-md-12 edic">
+             <div class="circle text-center non" hacks="0">
+                <span class="glyphicon glyphicon-remove"></span>
+              </div>
+              <div class="circle text-center" hacks="1">
+                <h1>I</h1>
+              </div>
+              <div class="circle text-center" hacks="2">
+                <h1>II</h1>
+              </div>
+              <div class="circle text-center" hacks="3">
+                <h1>III</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 text-center">
+            <h4>¿Trabajas?</h4>
+          </div>
+          <div class="row l_hack">
+            <div class="col-md-10 col-md-offset-3 col-xs-offset-1 work">
+              <div class="circle text-center">
+                <h1> <span class="glyphicon glyphicon-ok"></span></h1>
+              </div>
+              <div class="circle text-center bad">
+                <h1> <span class="glyphicon glyphicon-remove"></span></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="step4 hidden text-center">
+          <h1>
+            Ya eres parte del hackaton mas increible, bienvenido. 
+          </h1>
+        </div>
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      </div>
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12 content_reg2">
+        <div class="step1-5 col-md-12 step1">
+          <div class="row">
+            <div class="col-sm-6">
+              <select placeholder="Escuela" class="form-control input-lg uni">
+                <option value="---">Escuela</option>
+                <option value="2">Tec de Monterrey</option>
+                <option value="3">Otra</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <input placeholder="ID / Matricula" class="idu form-control input-lg"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <input placeholder="Carrera" class="form-control input-lg carrera"/>
+            </div>
+            <div class="col-sm-6">
+            
+              <select class="form-control input-lg nivel">
+              <option value="--">Nivel</option>
+                <option value="Preparatoria">Preparatoria</option>
+                <option value="Bachillerato">Universidad</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <!-- <input placeholder="Campus" class="form-control input-lg campus"/> -->
+              <select class="form-control input-lg campus">
+                <option value="--">Campus</option>
+                <option value="3">Norte</option>
+              </select>
+            </div>
+            <div class="col-sm-3">
+           
+              <select name="" id="" class="form-control input-lg inicio">
+                <option value="--">Iniciaste</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+              </select>
+            </div>
+            <div class="col-sm-3">
+           
+              <select name="" id="" class="form-control input-lg fin">
+                <option value="--">Finalizas</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2020">2021</option>
+                <option value="2020">2022</option>
+                <option value="2020">2023</option>
+              </select>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12 message text-center">
+            <div></div>
+          </div>
+      <div class="col-sm-8 col-sm-offset-2 col-xs-12 content_reg3">
+        <div class="btn_siguiente col-xs-6 col-xs-offset-3 text-center">SIGUIENTE</div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--Third party -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/assets/vendor/janimate.min.js"></script>
+  <script src="/assets/js/registro.js"></script>
+  <!--end of Third party-->
+
+</body>
+</html>

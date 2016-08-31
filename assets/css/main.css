@@ -1,0 +1,39 @@
+@import 'sidebar.css';
+@import 'home.css';
+@import 'acercade.css';
+@import 'sponsors.css';
+@import 'agenda.css';
+@import 'faq.css';
+@import 'beca.css';
+@import 'apoyo.css';
+@import 'evento.css';
+@import 'contacto.css';
+@import 'footer.css';
+@import 'equipo.css';
+@import 'registro.css';
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('font/avenir.ttf'); /* IE9 Compat Modes */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #EFEFEF;
+	font-family: Avenir;
+
+}
+span {
+  color: #F40C5A;
+}
+a{
+  text-decoration: none;
+}
+
+a:hover,a:active, a:focus{
+	text-decoration: none;
+}
