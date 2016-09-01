@@ -6,6 +6,8 @@
   padding-top: 40px;
   padding-bottom: 20px;
 }
+
+
 #contacto header {
   text-align: center;
 }
@@ -20,8 +22,8 @@
   width: 100%;
   border: solid 1px #e7e7e7;
 }
-#inputMensaje {
-  height: 150px;
+.msg_f {
+  height: 150px !important;
 }
 #contacto .inputButton {
   background-color: #F40C5A;
@@ -40,3 +42,5 @@
   text-align: center;
   padding: 20px 0 ;
 }
+
+
