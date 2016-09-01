@@ -34,4 +34,10 @@
   color:white;
   text-align: center;
   font-size: 19px;
+      font-size: 14px;
+    letter-spacing: 1px;
 }
+
+.sable_f{
+        max-height: 68px;
+    }

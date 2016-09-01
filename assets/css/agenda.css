@@ -13,10 +13,12 @@
   margin-bottom: 15px;
 }
 #agenda .headerHorario {
-  border-bottom: 3px solid #F40C5A;
+  border-bottom: 1px solid #F40C5A;
   background-color: black;
   color: white;
   padding: 10px 0;
+      font-size: 21px;
+    font-weight: bolder;
 }
 #agenda .mainHorario {
   border-bottom: 25px solid #F40C5A;
@@ -38,6 +40,10 @@
 
 .mainHorario{
   border-radius: 0 0 4px 4px;
+}
+
+.separator h4{
+      color: aliceblue;
 }
 
 @media (max-height: 992px) {

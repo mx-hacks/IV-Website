@@ -18,6 +18,15 @@
   src: url('font/avenir.ttf'); /* IE9 Compat Modes */
 }
 
+@font-face {
+  font-family: 'front';
+  src: url('font/front.ttf'); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'front_out';
+  src: url('font/front_out.ttf'); /* IE9 Compat Modes */
+}
+
 
 * {
   margin: 0;
@@ -37,4 +46,16 @@ a{
 
 a:hover,a:active, a:focus{
 	text-decoration: none;
+}
+
+h1,h2,h3,h4{
+  font-family: front !important;
+  letter-spacing: -4px;
+}
+
+.special_font{
+      font-family: front_out !important;
+    letter-spacing: -3px;
+    font-weight: 100;
+    color: #b9b9b9 !important;
 }

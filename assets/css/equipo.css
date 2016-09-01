@@ -60,6 +60,8 @@
   float: none;
   vertical-align: top;
 }
+
+
 .equipoCard img {
   border-radius: 100%;
   overflow: hidden;
@@ -69,6 +71,7 @@
 }
 .equipoCard h4 {
   color: white;
+  font-size: 14px !important;
 }
 .equipoCard:hover {
   cursor: pointer;

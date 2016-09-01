@@ -46,27 +46,30 @@
         </div>
         <div class="step1 col-md-12">
           <div class="row">
-            <div class="col-sm-4">
-              <input placeholder="Nombre" class="form-control input-lg name"/>
+            <div class="col-sm-4 required">
+              
+              <input placeholder="Nombre" class="form-control input-lg name" required />
+
+
             </div>
-            <div class="col-sm-8">
-              <input placeholder="Apellido(s)" class="form-control input-lg lastn"/>
+            <div class="col-sm-8 required">
+              <input placeholder="Apellido(s)" class="form-control input-lg lastn "/>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-3 required">
               <select placeholder="Edad" class="form-control input-lg 1-100 edad">
                 <option value="--">Edad</option>
               </select>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3 required">
               <select placeholder="Genero" class="form-control input-lg genero">
                 <option value="--">Género</option>
                 <option value="masculino">Hombre</option>
                 <option value="femenino">Mujer</option>
               </select>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 required">
               <input placeholder="Teléfono" onkeypress="return event.charCode >= 48 && event.charCode <= 57" pattern="[0-9]" class="form-control input-lg telefono"/>
             </div>
           </div>
@@ -104,7 +107,7 @@
           </div>
           <div class="row">
             <div class="col-md-8 col-md-offset-2"><br/>
-              <input placeholder="Escríbelos aquí" disabled="disabled" class="form-control input-lg specs"/>
+              <input placeholder="Escríbela aquí" disabled="disabled" class="form-control input-lg specs"/>
             </div>
           </div>
         </div>
@@ -158,30 +161,34 @@
         </div>
         <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <div class="step4 hidden text-center">
-          <h1>
-            Ya eres parte del hackaton mas increible, bienvenido. 
-          </h1>
+          <h2>
+            ¡Gracias por aplicar! <br>
+                    <br>
+             Si eres seleccionado serás notificado a partir del 1 de Noviembre. 
+          </h2>
+          <br>
+          <a href="/" class="back"> Regresar al home</a>
         </div>
         <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       </div>
       <div class="col-sm-8 col-sm-offset-2 col-xs-12 content_reg2">
         <div class="step1-5 col-md-12 step1">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 required">
               <select placeholder="Escuela" class="form-control input-lg uni">
                 <option value="--">Escuela</option>
                 <option value="0">Otra</option>
               </select>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 required">
               <input placeholder="ID / Matricula" class="idu form-control input-lg"/>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 required">
               <input placeholder="Carrera" class="form-control input-lg carrera"/>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 required">
             
               <select class="form-control input-lg nivel">
               <option value="--">Nivel</option>
@@ -191,14 +198,14 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 required">
               <!-- <input placeholder="Campus" class="form-control input-lg campus"/> -->
               <select class="form-control input-lg campus">
                 <option value="--">Campus</option>
                 <option value="0">Sin Campus</option>
               </select>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3 required">
            
               <select name="" id="" class="form-control input-lg inicio">
                 <option value="--">Iniciaste</option>
@@ -214,7 +221,7 @@
                 <option value="2020">2020</option>
               </select>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3 required">
            
               <select name="" id="" class="form-control input-lg fin">
                 <option value="--">Finalizas</option>

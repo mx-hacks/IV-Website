@@ -71,7 +71,7 @@
       name:'Home',
       img:'home',
       imgHover:'homecolor',
-      route:'/',
+      route:'/#home',
       rosa: false
     },{
       name:'Sponsors',

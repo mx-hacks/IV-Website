@@ -19,41 +19,50 @@
     var plan = [{
       titulo:'Sábado 5 de noviembre',
       dias:[{
-        hora:'8:00 - 9:00',
-        actividad:'Sale el autobus del metro'
+        hora:'8:00 a.m - 9:00 a.m',
+        actividad:'Salida autobuses de Metro Auditorio y Zapata'
       },{
-        hora:'9:00 - 10:00',
-        actividad:'Registro en las instalaciones'
+        hora:'9:00 a.m - 10:00 a.m',
+        actividad:'Inicia registro de participantes'
       },{
-        hora:'10:00 - 11:00',
-        actividad:'coffebreak / equipos',
+        hora:'10:00 a.m - 11:00 a.m',
+        actividad:'Coffebreak / Creación de equipos',
       },{
-        hora:'11:00 - 12:00',
-        actividad:'inauguración'
+        hora:'11:00 a.m - 12:00 p.m',
+        actividad:'Inauguración MX Hacks IV'
       },{
-        hora:'12:00 - 15:00',
-        actividad:'hacking',
+        hora:'12:00 p.m - 3:00 p.m',
+        actividad:'Hacking time!',
       },{
-        hora:'15:00 - 17:00',
-        actividad:'comida',
+        hora:'3:00 p.m - 5:00 p.m',
+        actividad:'Comida',
       },{
-        hora:'17:00-21:00',
-        actividad:'hacking'
+        hora:'5:00 p.m-9:00 p.m',
+        actividad:'Hacking time!'
+      },{
+        hora:'9:00 p.m - 10:00 p.m',
+        actividad:'Cena'
       }]
     },{
       titulo:'Domingo 6 de noviembre',
       dias:[{
-        hora:'9:30 - 10:30',
+        hora:'2.30 a.m',
+        actividad:'Actividad',
+      },{
+        hora:'6:00 a.m - 7:00 a.m',
+        actividad:'Actividad',
+      },{
+        hora:'9:30 a.m - 10:30 a.m',
         actividad:'Desayuno',
       },{
-        hora:'10:30 - 13:30',
-        actividad:'hacking',
+        hora:'10:30 a.m - 1:30 p.m',
+        actividad:'Final hacking time!',
       },{
-        hora:'13:30 - 14:30',
+        hora:'1:30 p.m - 2:30 p.m',
         actividad:'Jurado',
       },{
-        hora:'14:30',
-        actividad:'Presentaciones finales y clausura',
+        hora:'2:30 p.m',
+        actividad:'Presentaciones finales y clausura Mx Hacks IV',
       }]
     }];
 })();
