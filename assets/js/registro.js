@@ -92,7 +92,7 @@ $("#themail").html(themail);
 
 $(function(){
     var $select = $(".1-100");
-    for (i=12;i<=80;i++){
+    for (i=14;i<=80;i++){
         $select.append($('<option></option>').val(i).html(i))
     }
 });
@@ -228,7 +228,7 @@ function step1(){
 	}else if(telefono == ""){
 		$(".message div").html("Te falta tu teléfono");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(telefono >= 8 && telefono < 15){
+	}else if(telefono.length < 8 || telefono.length > 15){
 		$(".message div").html("Tu teléfono esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(uni == "--"){

@@ -8,6 +8,11 @@
   text-align: center;
 }
 
+.fixyy:hover{
+  opacity: .4;
+}
+
+
 .home_f{
   background-image: url(../img/pantallas/aplica_ff.png);
   background-size: cover;
