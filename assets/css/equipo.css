@@ -1,0 +1,175 @@
+#equipo header{
+  text-align: center;
+  background-color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#equipo .nosotrosSeccion {
+  background-color: #272727;
+  background-image: url('../img/fondos/equipoFondo.svg');
+  background-size: cover;
+}
+.equipoPestanas{
+  padding-top: 40px;
+  text-align: center;
+}
+.equipoPestanas a{
+  background-color:#F40C5A;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.equipoPestanas a:hover {
+  text-decoration: none;
+}
+.nosotrosSeccion h3 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+}
+.equipoPestanas_button:hover {
+  background-color: white;
+  color:#F40C5A;
+  cursor: pointer;
+}
+.equipoPestana_activo {
+  background-color: white !important;
+  color:#F40C5A !important;
+}
+.cardDeck {
+  margin-bottom: 100px;
+  text-align: center;
+}
+.equipoCard {
+  background-image: url('../img/fondos/equipoCard.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 230px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #272727;
+  margin: 0 auto;
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.equipoCard img {
+  border-radius: 100%;
+  overflow: hidden;
+  margin-top:45px;
+  height: 100px;
+  width: 100px;
+}
+.equipoCard h4 {
+  color: white;
+}
+.equipoCard:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.cardFront {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+}
+.cardFront:hover {
+  transform: rotateY(180deg);
+}
+.modal-header {
+  background-color: black;
+}
+.close {
+  color: red;
+  opacity: .8;
+}
+.modalEquipo {
+  background-image: url('../img/fondos/infousuario.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+.modalMedalla {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.modalMedalla img {
+  border-radius: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+  height: 150px;
+  width: 150px;
+}
+.modalInfo {
+  display: inline-block;
+  width: 50%;
+  text-align: justify;
+  vertical-align: top;
+  margin-top: 10px;
+  padding-right: 40px;
+}
+.modalInfo h2 {
+  font-size: 25px;
+}
+.modalInfo h3 {
+  color: #F40C5B;
+  font-size: 18px
+}
+.modalInfo h4 {
+  font-size: 14px;
+}
+.carreraModal {
+  width: 140px;
+  margin: 0 auto;
+  text-align: center;
+}
+.modalInfo p {
+  font-size: 14px;
+  color: darkgray;
+}
+@media screen and (max-width:768px) {
+  .modalMedalla img {
+    margin-top: 0;
+  }
+  .modalMedalla img {
+    height: 100px;
+    width: 100px;
+  }
+  .modalMedalla {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width:450px) {
+  .modalMedalla img {
+    margin-top: 0;
+  }
+  .modalMedalla img {
+    height: 100px;
+    width: 100px;
+  }
+  .modalInfo {
+    width: 100%;
+    padding: 0;
+  }
+  .modalMedalla {
+    width: 100%;
+    margin: 0;
+  }
+  .modalEquipo {
+    background-image: none;
+  }
+}

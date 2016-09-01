@@ -1,0 +1,47 @@
+#agenda {
+  padding-top: 30px;
+  background-color: white;
+      max-height: 73vh;
+}
+#agenda header {
+  text-align: center;
+      padding-bottom: 31px;
+
+
+}
+#agenda .horarios article {
+  margin-bottom: 15px;
+}
+#agenda .headerHorario {
+  border-bottom: 3px solid #F40C5A;
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+}
+#agenda .mainHorario {
+  border-bottom: 25px solid #F40C5A;
+  background-color: #222222;
+  color: white;
+  min-height: 350px;
+}
+
+.separator{
+    border-bottom: 1px solid black;
+    margin-bottom: 13px;
+        margin-top: 13px;
+
+  }
+
+.headerHorario{
+  border-radius: 4px 4px 0 0;
+}   
+
+.mainHorario{
+  border-radius: 0 0 4px 4px;
+}
+
+@media (max-height: 992px) {
+  #agenda{
+    max-height: initial;
+  }
+}

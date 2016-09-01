@@ -1,0 +1,39 @@
+
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav" ng-controller="sidebarCrl as nav">
+
+
+            <div class=" stay_menu">
+                <li class="sidebar-brand">
+                    <a href="#/">
+                        <img class="col-xs-12 sidebar_mx" id="MxLogo" src="/assets/img/logo.svg" alt="Logo MxHacks4" >
+                    </a>
+                </li>
+                <li class="menu_bars" ng-click="nav.hide = !nav.hide">
+                  <a href=""  class="col-xs-12 fixyy" ng-hide="!nav.hide">
+                     <img  class="lines" src="/assets/img/menu/menu_r.png" alt="menu">
+                  </a>
+                  <a href=""  class="col-xs-12 fixyy" ng-hide="nav.hide">
+                      <img ng-hide="nav.hide" class="lines" src="/assets/img/menu/menu_g.png" alt="menu">
+                  </a>
+                </li>
+            </div>
+
+                <br><br>
+                <li class="top_fix"></li>
+                  <li ng-repeat="section in nav.sections" class="icn_c text-center">
+                  <a href="#{{section.route}}" class="m_btn" tag="{{section.name}}" ng-mouseover="section.rosa = true" ng-mouseleave="section.rosa = false" >
+
+
+                    <img ng-show="!section.rosa" ng-src="/assets/img/menu/{{section.img}}.svg" alt="{{section.img}}" >
+                    <img ng-show="section.rosa" ng-src="/assets/img/menu/{{section.imgHover}}.svg" alt="{{section.img}}" >
+
+                  </a>
+
+                </li>
+
+
+            </ul>
+        </div>

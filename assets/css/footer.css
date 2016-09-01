@@ -1,0 +1,36 @@
+#footer {
+  background-image: url(../img/pantallas/footer.png);
+    min-height: 67vh;
+    /* background-size: contain; */
+    background-position: bottom center;
+}
+.redesFooter {
+  position: absolute;
+  bottom: 75px;
+  width: 100%;
+}
+.redesFooter ul {
+  width: 135px;
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+}
+.redesFooter ul li {
+  display: inline-block;
+  margin: 10px;
+}
+.redesFooter ul li a {
+  text-decoration: none;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.redesFooter ul li a:hover {
+  color:#F40C5A;
+}
+.redesFooter h5{
+  color:white;
+  text-align: center;
+  font-size: 30px;
+}

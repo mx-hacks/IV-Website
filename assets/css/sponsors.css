@@ -1,0 +1,28 @@
+#sponsors {
+  background-color: white;
+}
+#sponsors header {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+#sponsors header h4 {
+  color: black;
+}
+#sponsors .GE {
+  text-align: center;
+  color: white;
+}
+#sponsors h2 {
+  text-align: center;
+}
+#sponsors .patrocinador {
+  padding: 5px 0;
+  margin: 5px 0;
+}
+#sponsors .patrocinador:nth-child(3){
+  padding-top: 60px;
+}
+.sponsorsImg {
+  vertical-align: bottom;
+}

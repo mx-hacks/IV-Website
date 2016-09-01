@@ -1,0 +1,56 @@
+#home {
+  background-image: url(../img/pantallas/aplica_f.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+.home_f{
+  background-image: url(../img/pantallas/aplica_ff.png);
+  background-size: cover;
+  height: 100px;
+}
+
+.homeCopy h2, h3,h4{
+  color: #565454;
+}
+.homeCopy h2 span {
+  color:#F40C5A;
+}
+.msg{
+  color: #2bff90;
+}
+
+.form_mail{
+      margin-top: 34vh;
+}
+
+.form_mail h3,.form_mail h4{
+  color: aliceblue;
+}
+
+.form-control{
+      height: 46px;
+      border: 0px;
+}
+
+.user{
+  border-radius: 24px 0 0 24px;
+}
+
+.input-group-addon{
+  border-radius: 0 24px 24px 0;
+  background-color: #fb1855;
+  border: 0px;
+  color: #961236;
+  cursor: pointer;
+      padding: 6px 2em;
+}
+
+.input-group-addon:hover{
+   background-color: #c70c3f;
+   color: #961236;
+}

@@ -1,0 +1,21 @@
+<section id="agenda" class="col-xs-12" ng-controller="agendaCrl as agenda">
+  <header class="col-xs-12">
+    <h2 class="col-xs-12 col-sm-8 col-sm-offset-2"><span>Agenda</span></h2>
+  </header>
+  <div class="horarios col-xs-12 col-sm-10 col-sm-offset-1">
+    <article class="col-xs-12 col-sm-6" ng-repeat="horario in agenda.horarios">
+      <header class="headerHorario">{{horario.titulo}}</header>
+      <main class="col-xs-12 mainHorario">
+        <div class="col-xs-12 separator">
+          <h4 class="col-xs-5">Hora</h4>
+          <h4 class="col-xs-7">Actividad</h4>
+
+        </div>
+        <div class="col-xs-12" ng-repeat="dia in horario.dias">
+          <h5 class="col-xs-5">{{dia.hora}}</h5>
+          <h5 class="col-xs-7">{{dia.actividad}}</h5>
+        </div>
+      </main>
+    </article>
+  </div>
+</section>

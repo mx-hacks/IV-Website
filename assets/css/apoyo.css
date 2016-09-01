@@ -1,0 +1,35 @@
+#apoyo {
+  background-color:#272727;
+  padding: 50px 0;
+  background-image: url('../img/fondos/apoyoilustracion.svg');
+   background-size: cover;
+    background-position: center center;
+}
+#apoyo header {
+  text-align: center;
+}
+#apoyo h4 {
+  color: white;
+  padding-bottom: 30px;
+}
+#apoyo div a {
+  background-color: black;
+  color: #F40C5A;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#apoyo div a:hover {
+  text-decoration: none;
+  color:black;
+  background-color: #F40C5A;
+  font-weight: bold;
+}
+
+@media screen and (min-width:426px){
+  .fixh{
+    margin-left: 30%;
+  }
+}

@@ -1,0 +1,15 @@
+#evento {
+  background-image: url(../img/pantallas/tec.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: 100px;
+}
+#evento header {
+  text-align: center;
+  color: black;
+}
+#evento h3 {
+  font-size: 20px;
+  color: black;
+}
