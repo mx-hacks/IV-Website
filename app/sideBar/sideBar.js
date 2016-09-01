@@ -37,22 +37,22 @@
 
 
   $("body").on('mouseenter', '.m_btn', function(event) {
-   
+
     console.log(this);
 
     $(this).append("<div class='tag'>"+ $(this).attr("tag") +" </div>");
- 
-    
+
+
 
   });
 
 
   $("body").on('mouseleave', '.m_btn', function(event) {
     event.preventDefault();
-    
+
 
     $(".tag").remove();
-    
+
 
   });
 
@@ -68,44 +68,52 @@
 
 
     var icons = [{
+      name:'Home',
       img:'home',
       imgHover:'homecolor',
-      route:'acercade',
+      route:'/',
       rosa: false
     },{
+      name:'Sponsors',
       img:'sponsor_g',
       imgHover:'sponsor_r',
-      route:'sponsors'
+      route:'/#sponsors'
     },{
+      name:'Agenda',
       img:'agenda',
       imgHover:'agendacolor',
-      route:'agenda'
+      route:'/#agenda'
     },{
+      name:'Preguntas',
       img:'faqs',
       imgHover:'faqscolor',
-      route:'faq'
+      route:'/#faq'
     },{
+      name:'Becas',
       img:'becas',
       imgHover:'becascolor',
-      route:'beca'
+      route:'/#beca'
     },{
+      name:'Apoyo',
       img:'apoyo',
       imgHover:'apoyocolor',
-      route:'apoyo'
+      route:'/#apoyo'
     },{
+      name:'Evento',
       img:'evento',
       imgHover:'eventocolor',
-      route:'evento'
+      route:'/#evento'
     },{
-    //   img:'equipo',
-    //   imgHover:'equipocolor',
-    //   route:'equipo'
-    // },{
+      name:'Equipo',
+      img:'equipo',
+      imgHover:'equipocolor',
+      route:'equipo'
+    },{
+      name:'Contacto',
       img:'contacto_g',
       imgHover:'contacto_r',
-      route:'contacto'
+      route:'/#contacto'
     }
   ];
 
 })();
-

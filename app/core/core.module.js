@@ -5,8 +5,6 @@
     .module('app.core', [
 
       //Angular modules
-      'ngAnimate',
       'ngRoute',
-      'ngSanitize',
     ]);
 })();

@@ -1,0 +1,11 @@
+.error404 {
+  text-align: center;
+}
+.error404 img {
+  width: 100%;
+}
+@media screen and (max-width:768px) {
+  #error {
+    padding-top: 150px;
+  }
+}

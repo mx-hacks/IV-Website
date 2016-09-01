@@ -20,7 +20,9 @@
 .homeCopy h2 span {
   color:#F40C5A;
 }
-
+.msg{
+  color: #2bff90;
+}
 
 .form_mail{
       margin-top: 34vh;

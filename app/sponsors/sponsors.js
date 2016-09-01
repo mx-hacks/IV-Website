@@ -22,25 +22,31 @@
 
     var gold = [{
       name:'Sable',
-      img:'logoSable.svg'
+      img:'logoSable.svg',
+      vinculo:'http://sable.mx/'
     },{
       name:'Rappi',
-      img:'logoRapi.png'
+      img:'logoRapi.png',
+      vinculo:'https://www.rappi.com/'
     },
   ];
 
   var silver = [{
     name:'SG',
-    img:'logoSG.svg'
+    img:'logoSG.svg',
+    vinculo:'http://sg.com.mx/'
   },{
     name:'MLH',
-    img:'logoMLH.svg'
+    img:'logoMLH.svg',
+    vinculo:'https://mlh.io/'
   },{
     name:'Tundra',
-    img:'logoTundra.png'
+    img:'logoTundra.png',
+    vinculo:'https://www.facebook.com/TundraMX/'
   },{
-    name:'Inventivs',
-    img:'logoInv.svg'
+    name:'Inventive',
+    img:'logoInv.svg',
+    vinculo:'https://inventivehack.com'
   },
 
   ];

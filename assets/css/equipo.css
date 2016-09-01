@@ -1,7 +1,7 @@
 #equipo header{
   text-align: center;
   background-color: white;
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 #equipo .nosotrosSeccion {
@@ -20,6 +20,9 @@
   text-align: center;
   color: white;
   margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
 .equipoPestanas a:hover {
   text-decoration: none;
@@ -28,18 +31,20 @@
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
-}
-.nosotrosSeccion a {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  color: white;
 }
 .equipoPestanas_button:hover {
   background-color: white;
   color:#F40C5A;
   cursor: pointer;
 }
+.equipoPestana_activo {
+  background-color: white !important;
+  color:#F40C5A !important;
+}
 .cardDeck {
   margin-bottom: 100px;
+  text-align: center;
 }
 .equipoCard {
   background-image: url('../img/fondos/equipoCard.svg');
@@ -50,6 +55,10 @@
   text-align: center;
   border-radius: 10px;
   background-color: #272727;
+  margin: 0 auto;
+  display: inline-block;
+  float: none;
+  vertical-align: top;
 }
 .equipoCard img {
   border-radius: 100%;
@@ -122,6 +131,11 @@
 }
 .modalInfo h4 {
   font-size: 14px;
+}
+.carreraModal {
+  width: 140px;
+  margin: 0 auto;
+  text-align: center;
 }
 .modalInfo p {
   font-size: 14px;

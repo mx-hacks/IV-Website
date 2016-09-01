@@ -71,6 +71,10 @@ var $input_email1 = $('.user').val();
 
       if (validateEmail($input_email1) == false){
             console.log($input_email1)
+            $(".msg").removeClass('hidden');
+            $(".msg").jAnimate("fadeInDown",function(){
+
+            });
             console.log("mal");
         
         }else{

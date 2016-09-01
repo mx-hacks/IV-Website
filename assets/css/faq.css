@@ -12,12 +12,15 @@
   margin-bottom: 50px;
   border-bottom: 2px dotted lightgray;
 }
-#faq .faqCard {
-  /*min-height: 500px;*/
+
+@media screen and (max-width:768px){
+  #faq .faqCard img{
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width:450px){
-  #faq .faqCard {
-    margin-top: -30px;
+  #faq .faqCard img{
+    margin-bottom: 14px;
   }
 }
 #faq h4 {

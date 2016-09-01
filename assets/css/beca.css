@@ -7,20 +7,71 @@
 }
 .metro {
   position: absolute;
-  right: 120px;
-  top: 300px;
-  width: 23%;
-}
-@media screen and (max-width:450px){
-  .metro {
-    position: relative;
-    margin: 0 auto;
-    display: block;
-  }
+  right: 50px;
+  top: 380px;
+  width: 28%;
 }
 .metro div {
-  display: block;
+  display: inline-block;
+  width: 49%;
 }
 .metro p {
   display: inline-block;
+}
+.mailBecas {
+  position: absolute;
+  right: 50px;
+  bottom: 120px;
+  width: 23%;
+}
+@media screen and (max-width:1024px){
+  .metro {
+    position: absolute;
+    right: 20px;
+    top: 300px;
+    width: 28%;
+  }
+  .mailBecas {
+    position: absolute;
+    right:50px;
+    bottom: 70px;
+    width: 23%;
+  }
+
+}
+
+@media screen and (max-width:768px){
+  .metro {
+    position: absolute;
+    right: 20px;
+    top: 250px;
+    width: 28%;
+  }
+  .mailBecas {
+    position: absolute;
+    right:50px;
+    bottom: 20px;
+    width: 23%;
+  }
+
+}
+@media screen and (max-width:450px){
+  .metro {
+    position:inherit;
+    display: inline-block;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .mailBecas {
+    position: inherit;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .metro div {
+    display: inline-block;
+    width: 49%;
+  }
+
 }

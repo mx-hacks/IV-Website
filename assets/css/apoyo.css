@@ -28,6 +28,8 @@
   font-weight: bold;
 }
 
-.fixh{
-  margin-left: 30%;
+@media screen and (min-width:426px){
+  .fixh{
+    margin-left: 30%;
+  }
 }

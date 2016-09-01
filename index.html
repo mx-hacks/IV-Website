@@ -19,16 +19,7 @@
 
 <!-- <div id="page-content-wrapper">   option but not sure :D-->
 <div><!-- better simple div -->
-  <home-view></home-view>
-  <sponsors-view></sponsors-view>
-  <agenda-view></agenda-view>
-  <faq-view></faq-view>
-  <beca-View></beca-View>
-  <apoyo-view></apoyo-view>
-  <evento-view></evento-view>
-  <contacto-view></contacto-view>
-  <footer-view></footer-view>
-  <equipo-nosotros></equipo-nosotros>
+  <ng-view></ng-view>
 </div>
 </div>
   <!--Third party -->
@@ -38,9 +29,17 @@
   <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src='/bower_components/angular-simple-logger/dist/angular-simple-logger.js'></script>
   <script src='/bower_components/angular-google-maps/dist/angular-google-maps.js'></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
   <!--end of Third party-->
 
+
+
   <script src="/app/app.module.js"></script>
+  <script src="/app/routes/routes.js"></script>
+  <!--<script src="/app/core/appCrl.js"></script>-->
+
+  <script src="/app/indexView/indexView.js"></script>
+
   <script src="/app/core/core.module.js"></script>
   <script src="/app/sideBar/sideBar.js"></script>
   <script src="/app/home/home.js"></script>
@@ -53,6 +52,7 @@
   <script src="/app/contacto/contacto.js"></script>
   <script src="/app/footer/footer.js"></script>
   <script src="/assets/vendor/janimate.min.js"></script>
-  <!-- <script src="/app/equipo/equipo.js"></script> -->
+  <script src="/app/equipo/equipo.js"></script>
+  <script src="/app/404/404.js"></script>
 </body>
 </html>

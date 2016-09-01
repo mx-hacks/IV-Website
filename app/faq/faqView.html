@@ -3,15 +3,30 @@
     <h2 class="col-xs-12 col-sm-8 col-sm-offset-2"><span>FAQS</span></h2>
   </header>
   <section class="col-xs-12 col-sm-10 col-sm-offset-1 listaFaq">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 faqCard" ng-repeat="pregunta in faq.preguntas">
+    <div class="row" ng-repeat="pregunta in faq.preguntas">
+      <div class="col-xs-12 col-sm-6 faqCard" >
         <img class="col-xs-6 col-xs-offset-3 faqImg" ng-src="/assets/img/faqs/{{pregunta.img}}.png" alt="" />
         <h4 class="col-xs-10 col-xs-offset-1">{{pregunta.titulo}}</h4>
         <p class="col-xs-12">{{pregunta.respuesta}}</p>
       </div>
+      <div class="col-xs-12 col-sm-6 faqCard">
+        <img class="col-xs-6 col-xs-offset-3 faqImg" ng-src="/assets/img/faqs/{{pregunta.img2}}.png" alt="" />
+        <h4 class="col-xs-10 col-xs-offset-1">{{pregunta.titulo2}}</h4>
+        <p class="col-xs-12">{{pregunta.respuesta2}}</p>
+      </div>
+    </div>
+    <div class="row faqCard">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <img class="col-xs-6 col-xs-offset-3 faqImg" ng-src="/assets/img/faqs/icon11.png" alt="" />
+        <h4 class="col-xs-10 col-xs-offset-1">!Genial¡ ¿Cómo me involucro?</h4>
+        <p class="col-xs-12">Visita el sitio web de Major League Hacking para revisar la lista de los próximos hackathons
+          en las temporadas de Norte América y Europa. Si tu región o área no está representada, deberás ponerte en contacto
+          con nosotros y ver cómo podemos cambiar eso.</p>
+      </div>
     </div>
 
-    
+
+
 
   </section>
 </section>
