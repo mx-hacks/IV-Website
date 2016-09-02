@@ -23,16 +23,16 @@
     nombreCompleto:'Margot Duerk',
     carrera:'Tecnologías Computacionales',
     foto:'margot.png',
-    twitter:'',
+    twitter:'duekis',
     subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MxHacks',
     descripcionCorta:'He sido parte de la Major League Hacking (MLH) por aproximadamente dos años y el MXHacks IV es el tercer MXHacks que soy parte del comité organizador.',
     descripcion:'Fui co-fundadora del Google Developer Group Polymer México y Wonder Coders. En el pasado trabajé como sensei en Devf y actualmente soy parte de una Startup llamada Alter'
   },{
     nombre:'Luis',
     nombreCompleto:'Luis Alberto Villeda',
-    carrera:'Ingeniería en computación',
+    carrera:'Logística',
     foto:'luis2.png',
-    twitter:'',
+    twitter:'LuisTruVa',
     subtitulo:'Siempre podemos aprender algo si estamos abiertos a estas posibilidades.',
     descripcionCorta:'Actualmente soy Coach de la Major League Hacking, entusiasta del trabajo colaborativo, apasionado por lo hackatones y por aprender nuevas cosas.',
     descripcion:'Entusiasta del trabajo colaborativo y estudiante de ingeniería en computación en la Facultad de Ingeniería de la UNAM, actualmente soy coach en la Major League Hacking, una organización internacional que se dedica a hacer hackathons todo el mundo para animar más aún estudiantes para crear algo sorprendente. He conocido a muchas personas del entorno empresarial , la tecnología y los hackers que son grandes fuentes de inspiración , algunos que he tenido oportunidad de enseñarles algo , pero en muchas ocasiones me he dado grandes lecciones . '
@@ -56,17 +56,17 @@
     descripcion:''
   },{
     nombre:'Pablo',
-    nombreCompleto:'',
-    carrera:'lic',
+    nombreCompleto:'Pablo Trinidad',
+    carrera:'Hacker Experience',
     foto:'pablo.png',
-    twitter:'',
+    twitter:'pablotrinidadpa',
     subtitulo:'',
     descripcionCorta:'',
     descripcion:''
   },{
     nombre:'Anuar',
     nombreCompleto:'Anuar Harb Becerra',
-    carrera:'Administración',
+    carrera:'Logística & patrocinios',
     foto:'anuar.png',
     twitter:'anuarharb',
     subtitulo:'Hustler y Hacker, entusiasta de los temas de emprendimiento y tecnología. ',
@@ -75,36 +75,36 @@
   },{
     nombre:'Sofía',
     nombreCompleto:'Zaphire Nomm',
-    carrera:'Diseño Gráfico',
+    carrera:'Diseñadora gráfica y ambiental',
     foto:'sof.png',
-    twitter:'',
+    twitter:'https://twitter.com/zaphirenomm',
     subtitulo:'Diseñadora Feelance. Apasionada por el rugby, los videojuegos y la animación',
     descripcionCorta:'Actualmente parte de Epic Queen, en proceso de titulación. Se siente muy orgullosa del diseño mexicano autóctono contemporáneo combinado con la actualidad.',
     descripcion:'Especializada en ilustración en busca de una maestría en animación, con miras de trabajar en proyectos de videojuegos. Participó en el diseño de Startup Weeken ITAM del 2015 y actualmente está en el concurso Interuniversitario de Animación creado y llevado acabo por Locomoción.'
   },{
     nombre:'Alex',
-    nombreCompleto:'',
-    carrera:'Lic',
+    nombreCompleto:'Alejandro Tapia',
+    carrera:'Marketing',
     foto:'alex.png',
-    twitter:'',
+    twitter:'@alejandrotapiab',
     subtitulo:'',
     descripcionCorta:'',
     descripcion:''
   },{
     nombre:'Carmen',
     nombreCompleto:'Carmen Cuevas',
-    carrera:'lic',
+    carrera:'Voluntarios y embajadores',
     foto:'carmen.png',
-    twitter:' https://twitter.com/CarmenCuJz ',
+    twitter:' CarmenCuJz  ',
     subtitulo:'Creadora de mejores experiencias a las personas mediante el desarrollo web.',
     descripcionCorta:'Ella podrá ayudarte a crear y desarrollarte en esté maratón.',
     descripcion:'Organizadora y embajadora del GDG WonderCoders, Voluntaria en Voluntarios México, le apasiona transmitir sus conocimientos mediante eventos incluyentes. '
   },{
     nombre:'Luis',
-    nombreCompleto:'',
-    carrera:'lic',
+    nombreCompleto:'Luis Trujillo',
+    carrera:'Logística & patrocinios',
     foto:'luis.png',
-    twitter:'',
+    twitter:'@LuisTruVa',
     subtitulo:'',
     descripcionCorta:'',
     descripcion:''

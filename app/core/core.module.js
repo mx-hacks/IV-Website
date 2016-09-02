@@ -6,5 +6,6 @@
 
       //Angular modules
       'ngRoute',
+      'ngMap'
     ]);
 })();

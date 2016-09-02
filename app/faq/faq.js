@@ -22,7 +22,7 @@
       respuesta:'Un hackatón es un evento donde se reunen algunas de las personas más talentosas con diferentes perfiles para desarrollar un proyecto en 24 hasta 36 horas seguidas de programación. Al final se presentan los demos de las aplicaciones y se elige a los mejores.',
       img2:'icon5',
       titulo2:'¿Qué pasa si no se programar?',
-      respuesta2:'!No hay problema¡ El equipo completo de Major League Hacking tenían muy pocos conocimientos cuando asistieron a su primer hackathon. Es completamente irrelevante la experiencia que tengas dentro del hackathon, se trata más acerca de tu interés en la tecnología. Todos los eventos miembros de MLH son apasionados haciendo los hackathons muy inclusivos y amigables para los principiantes. Si estás esperando aprender cómo programar fuera de un hackathon, existe un blog post fantástico que deberías leer. Después, deberías checar las siguientes plataformas: Treehouse, Codecademy, y el Blog de Major League Hacking para comenzar.',
+      respuesta2:'¡No hay problema! Es completamente irrelevante la experiencia que tengas dentro del hackathon, se trata más acerca de tu interés en la tecnología.',
     },{
       img:'icon2',
       titulo:'¿Si soy foráneo Mx Hacks me puede apoyar con mi viaje?',
@@ -33,7 +33,7 @@
     },{
       img:'icon4',
       titulo:'¿Será molesto para la gente si les hago preguntas?',
-      respuesta:'!Para Nada¡ Este es un malentendido muy común acerca de los hackathons y de hecho, es completamente lo opuesto. El ambiente en estos eventos está diseñado especialmente para alentar a todos a divertirse y ayudarse mutuamente. Si alguna vez te encuentras en problemas con algo, anda y busca a un voluntario que pueda ayudar y si no puede, seguramente conocerá a alguien que sí pueda.',
+      respuesta:'¡Para Nada! Este es un malentendido muy común acerca de los hackathons y de hecho, es completamente lo opuesto. El ambiente en estos eventos está diseñado especialmente para alentar a todos a divertirse y ayudarse mutuamente. Si alguna vez te encuentras en problemas con algo, anda y busca a un voluntario que pueda ayudar y si no puede, seguramente conocerá a alguien que sí pueda.',
       img2:'icon9',
       titulo2:'¿Habrá comida?',
       respuesta2:'¡Por supuesto!. Tus comidas para el fin de semana serán completamente gratuitas, además muchos bocadillos y bebidas durante el evento para mantenerte con energía. Si tienes requisitos dietéticos específicos, deberás de especificarlo en tu aplicación, así podremos tomar las medidas necesarias.',
