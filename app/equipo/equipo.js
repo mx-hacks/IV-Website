@@ -57,12 +57,12 @@
   },{
     nombre:'Pablo',
     nombreCompleto:'Pablo Trinidad',
-    carrera:'Hacker Experience',
+    carrera:'Hackers Experience',
     foto:'pablo.png',
     twitter:'pablotrinidadpa',
-    subtitulo:'',
-    descripcionCorta:'',
-    descripcion:''
+    subtitulo:'Inventive & MLH.',
+    descripcionCorta:'Fanático de los Hackathons y entusiasta de los servidores.',
+    descripcion:'Hola, soy Pablo. Actualmente trabajo con Major League Hacking apoyando participantes y organizadores de hackathons en todo el mundo. Hace un año comencé una casa de desarrollo de software llamada Inventive (también trabajo ahí ♥️). Me apasionan los proyectos Open Source, la enseñanza y el aprendizaje.'
   },{
     nombre:'Anuar',
     nombreCompleto:'Anuar Harb Becerra',
