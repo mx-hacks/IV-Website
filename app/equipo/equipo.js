@@ -24,7 +24,7 @@
     carrera:'Tecnologías Computacionales',
     foto:'margot.png',
     twitter:'duekis',
-    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MxHacks',
+    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MX Hacks',
     descripcionCorta:'He sido parte de la Major League Hacking (MLH) por aproximadamente dos años y el MXHacks IV es el tercer MXHacks que soy parte del comité organizador.',
     descripcion:'Fui co-fundadora del Google Developer Group Polymer México y Wonder Coders. En el pasado trabajé como sensei en Devf y actualmente soy parte de una Startup llamada Alter'
   },{
@@ -134,7 +134,7 @@
     carrera:'Tecnologías Computacionales',
     foto:'margot.png',
     twitter:'',
-    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MxHacks',
+    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MX Hacks',
     descripcionCorta:'He sido parte de la Major League Hacking (MLH) por aproximadamente dos años y el MXHacks IV es el tercer MXHacks que soy parte del comité organizador.',
     descripcion:'Fui co-fundadora del Google Developer Group Polymer México y Wonder Coders. En el pasado trabajé como sensei en Devf y actualmente soy parte de una Startup llamada Alter'
   }]
@@ -145,7 +145,7 @@
     carrera:'Tecnologías Computacionales',
     foto:'margot.png',
     twitter:'',
-    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MxHacks',
+    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MX Hacks',
     descripcionCorta:'He sido parte de la Major League Hacking (MLH) por aproximadamente dos años y el MXHacks IV es el tercer MXHacks que soy parte del comité organizador.',
     descripcion:'Fui co-fundadora del Google Developer Group Polymer México y Wonder Coders. En el pasado trabajé como sensei en Devf y actualmente soy parte de una Startup llamada Alter'
   }]

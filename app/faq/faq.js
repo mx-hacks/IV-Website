@@ -19,13 +19,13 @@
     var dudas = [{
       img:'icon1',
       titulo:'¿Qué es un hackatón?',
-      respuesta:'Un hackatón es un evento donde se reunen algunas de las personas más talentosas con diferentes perfiles para desarrollar un proyecto en 24 hasta 36 horas seguidas de programación. Al final se presentan los demos de las aplicaciones y se elige a los mejores.',
+      respuesta:'La mejor descripción de un hackathon es “un maratón de invenciones”. Cualquier persona con interés en la tecnología asiste a un hackathon a aprender, construir y compartir sus creaciones en el transcurso de un fin de semana en un ambiente relajado y amigable. No necesitas ser un programador y ciertamente tampoco estar estudiando algo relacionado Ciencias de la Computación.',
       img2:'icon5',
       titulo2:'¿Qué pasa si no se programar?',
       respuesta2:'¡No hay problema! Es completamente irrelevante la experiencia que tengas dentro del hackathon, se trata más acerca de tu interés en la tecnología.',
     },{
       img:'icon2',
-      titulo:'¿Si soy foráneo Mx Hacks me puede apoyar con mi viaje?',
+      titulo:'Si no vivo en la CDMX ¿Me pueden apoyar con mi viaje?',
       respuesta:'Sí, lo único que tienes que hacer es aplicar por una beca para poder venir a la CDMX saliendo de Guadalajara o Monterrey.',
       img2:'icon10',
       titulo2:'Me acabo de graduar, ¿Aún puedo asistir a un evento?',
@@ -43,13 +43,13 @@
       respuesta:'La convocatoria está abierta para todos los estudiantes desde preparatoria hasta cualquier persona que se haya graduado dentro de los últimos 12 meses, sin importar su carrera.',
       img2:'icon6',
       titulo2:'¿Cuánto cuesta?',
-      respuesta2:'Mx Hacks es un evento GRATUITO. Nosotros nos encargamos de que tengas una gran experiencia durante este fin de semana. Lo único que corre por tu cuenta son tus viáticos para llegar a nuestra sede.',
+      respuesta2:'MX Hacks es un evento GRATUITO. Nosotros nos encargamos de que tengas una gran experiencia durante este fin de semana. Lo único que corre por tu cuenta son tus viáticos para llegar a nuestra sede.',
     },{
       img:'icon3',
       titulo:'¿Qué debo llevar?',
       respuesta:'Deberás contar con tu credencial de estudiante, tu laptop con su cargador, cargador de celular, gadgets y todo lo que necesites para estimular tu creatividad. Recuerda que está prohibido entrar con armas, drogas y/o alcohol.',
       img2:'icon11',
       titulo2:'¿Habrá premios?',
-      respuesta2:'Sí, pero recuerda que no sólo se trata de lo que puedes ganar sino también de lo que aprendas y construyas en 36 horas para demostrar en en México también estamos generando un gran avance en creación de tecnología . Al final del evento habrá un panel de jueces quienes juzgarán los proyectos y elegirán a los tres mejores basado en la creatividad, dificultad técnica, diseño y aplicabilidad.',
+      respuesta2:'Sí, pero recuerda que no sólo se trata de lo que puedes ganar sino también de lo que aprendas y construyas en 36 horas para demostrar en en México también estamos generando un gran avance en creación de tecnología.',
     }]
 })();
