@@ -36,11 +36,14 @@
 }
 #contacto .inputButton:hover {
   background-color: #dc0a51;
- 
+
 }
 #contacto form h3{
   text-align: center;
   padding: 20px 0 ;
 }
-
-
+@media screen and (max-width:450px){
+  #contacto > form > div.col-xs-12.col-sm-6 {
+    margin-top: 20px;
+  }
+}
