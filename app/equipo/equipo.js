@@ -24,7 +24,7 @@
     carrera:'Tecnologías Computacionales',
     foto:'margot.png',
     twitter:'duekis',
-    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MX Hacks',
+    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MxHacks',
     descripcionCorta:'He sido parte de la Major League Hacking (MLH) por aproximadamente dos años y el MXHacks IV es el tercer MXHacks que soy parte del comité organizador.',
     descripcion:'Fui co-fundadora del Google Developer Group Polymer México y Wonder Coders. En el pasado trabajé como sensei en Devf y actualmente soy parte de una Startup llamada Alter'
   },{
@@ -57,12 +57,12 @@
   },{
     nombre:'Pablo',
     nombreCompleto:'Pablo Trinidad',
-    carrera:'Hackers Experience',
+    carrera:'Hacker Experience',
     foto:'pablo.png',
     twitter:'pablotrinidadpa',
-    subtitulo:'Inventive & MLH.',
-    descripcionCorta:'Fanático de los Hackathons y entusiasta de los servidores.',
-    descripcion:'Hola, soy Pablo. Actualmente trabajo con Major League Hacking apoyando participantes y organizadores de hackathons en todo el mundo. Hace un año comencé una casa de desarrollo de software llamada Inventive (también trabajo ahí ♥️). Me apasionan los proyectos Open Source, la enseñanza y el aprendizaje.'
+    subtitulo:'',
+    descripcionCorta:'',
+    descripcion:''
   },{
     nombre:'Anuar',
     nombreCompleto:'Anuar Harb Becerra',
@@ -134,7 +134,7 @@
     carrera:'Tecnologías Computacionales',
     foto:'margot.png',
     twitter:'',
-    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MX Hacks',
+    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MxHacks',
     descripcionCorta:'He sido parte de la Major League Hacking (MLH) por aproximadamente dos años y el MXHacks IV es el tercer MXHacks que soy parte del comité organizador.',
     descripcion:'Fui co-fundadora del Google Developer Group Polymer México y Wonder Coders. En el pasado trabajé como sensei en Devf y actualmente soy parte de una Startup llamada Alter'
   }]
@@ -145,7 +145,7 @@
     carrera:'Tecnologías Computacionales',
     foto:'margot.png',
     twitter:'',
-    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MX Hacks',
+    subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey Líder de MxHacks',
     descripcionCorta:'He sido parte de la Major League Hacking (MLH) por aproximadamente dos años y el MXHacks IV es el tercer MXHacks que soy parte del comité organizador.',
     descripcion:'Fui co-fundadora del Google Developer Group Polymer México y Wonder Coders. En el pasado trabajé como sensei en Devf y actualmente soy parte de una Startup llamada Alter'
   }]
