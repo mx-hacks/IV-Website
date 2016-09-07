@@ -117,13 +117,16 @@
             <h4>¿Haz participado en otros hackathons?</h4>
           </div>
           <div class="row l_hack l_1">
-            <div class="col-md-10 col-md-offset-3 col-xs-offset-1">
+            <div class="col-md-6 col-md-offset-3 col-xs-offset-1">
               <div class="circle text-center" ex="true">
                 <h1> <span class="glyphicon glyphicon-ok"></span></h1>
               </div>
               <div class="circle text-center bad" ex="false">
                 <h1> <span class="glyphicon glyphicon-remove"></span></h1>
               </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3 hackton hidden">
+              <input class="form-control input-lg" placeholder="¿Cuales?">
             </div>
           </div>
           <div class="col-xs-12 text-center">
@@ -164,7 +167,7 @@
           <h2>
             ¡Gracias por aplicar! <br>
                     <br>
-             Si eres seleccionado serás notificado a partir del 1 de Noviembre. 
+             Si eres seleccionado serás notificado a partir del 23 de Octubre. 
           </h2>
           <br>
           <a href="/" class="back"> Regresar al home</a>
@@ -192,14 +195,13 @@
             
               <select class="form-control input-lg nivel">
               <option value="--">Nivel</option>
-                <option value="Preparatoria">Preparatoria</option>
-                <option value="Bachillerato">Universidad</option>
+               
               </select>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-6 required">
-              <!-- <input placeholder="Campus" class="form-control input-lg campus"/> -->
+              <input placeholder="Campus" class="form-control input-lg campus_txt hidden"/>
               <select class="form-control input-lg campus">
                 <option value="--">Campus</option>
                 <option value="0">Sin Campus</option>
