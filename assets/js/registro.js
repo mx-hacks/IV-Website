@@ -28,6 +28,30 @@ var carrera;
 var experience;
 var hackatons;
 
+//============================================  GRADE
+
+	   					 $.ajax({
+
+					        url: 'https://api.mxhacks.mx/hackers/levels/',
+					        type: 'GET',
+					        success: function (res) {
+					            console.log(res);
+					            
+
+						            $.each(res, function( index, value ) {
+
+									  $(".nivel").append('<option value="'+value+'">'+value+'</option>');
+									});
+					        
+					        },
+					        error: function (res) {
+					            console.log(res);
+					            
+					        }
+					    });
+
+
+
 //============================================  School list
 var schools;
 
@@ -37,8 +61,10 @@ var schools;
 					        type: 'GET',
 					        success: function (res) {
 					            console.log(res);
+					            
 
 						            $.each(res, function( index, value ) {
+
 									  $(".uni").append('<option value="'+value.id+'">'+value.name+'</option>');
 									});
 					        
@@ -53,19 +79,32 @@ var schools;
 
 
 		$('.uni').change(function () {
+
 				uni = $(".uni").val();
 
-
+				
 			   				$.ajax({
 					        url: 'https://api.mxhacks.mx/hackers/schools/'+uni+'/campus/',
 					        type: 'GET',
 					        success: function (res) {
 					            console.log(res);
 
-						            $.each(res, function( index, value ) {
-						            	$(".campus").append('<option value="'+value.id+'">'+value.name+'</option>');
-									  
-									});
+					            	if (res== "") {
+					            		$(".campus").html("");
+											$(".campus").append('<option value="0">----</option>');
+											$(".campus").attr('disabled', 'disabled');
+					            	 }else{
+					            		// $(".campus").removeClass('hidden');
+					            		// $(".campus_txt").addClass('hidden');
+					            		// $(".campus").jAnimateOnce("rubberBand");
+					            		$(".campus").html("");
+							            $.each(res, function( index, value ) {
+							            	$(".campus").append('<option value="'+value.id+'">'+value.name+'</option>');
+										  	
+										});
+
+						            }
+
 					        
 					        },
 					        error: function (res) {
@@ -77,7 +116,7 @@ var schools;
 });
 
 
-//============================================ 
+//============================================ MAIL PRINT
 
 var themail = $.urlParam('mail').split("@");
 var themail = themail[0]; 
@@ -286,6 +325,56 @@ function step1(){
 
 			//-----------------------------------------
 
+			camp=$( ".campus" ).hasClass("hidden");
+			var id_u=$(".uni").attr('attribute', 'value');
+
+if (camp == true ) {
+
+
+ 						$.ajax({
+					        url: 'https://api.mxhacks.mx/hackers/schools/'+id_u+'/campus/',
+					        type: 'POST',
+					        data: { 
+					        
+					        	name: campus
+
+					        } ,
+					        success: function (res) {
+
+											    $.ajax({
+											        url: 'https://api.mxhacks.mx/applications/'+mail+'/education/',
+											        type: 'PUT',
+											        data: { 
+											        	school: uni,
+											        	campus: res.id,
+											        	school_join_year:inicio,
+											        	school_identification:idu,
+											        	school_graduation_year:fin,
+											        	education_level:nivel,
+											        	major:carrera
+											        } ,
+											        success: function (res) {
+											            console.log(res);
+											            console.log("f2");
+											            
+											        },
+											        error: function (res) {
+											            console.log(res);
+											            
+											        }
+											    });		
+
+
+					        },
+					        error: function (res) {
+					            console.log(res);
+					            
+					        }
+					    });
+
+
+}else{
+
 					    $.ajax({
 					        url: 'https://api.mxhacks.mx/applications/'+mail+'/education/',
 					        type: 'PUT',
@@ -308,6 +397,8 @@ function step1(){
 					            
 					        }
 					    });
+
+}
 
 			//-----------------------------------------
 
@@ -486,12 +577,21 @@ $(".love .circle").click(function(){
 
 });
 
-
+flag_hack=0;
 
 $(".l_1 .circle").click(function(){
 	$(".l_1 .circle").removeClass('pro_nice');
 	$(this).addClass('pro_nice');
 	experience=$(this).attr('ex');
+				if (flag_hack==0) {
+				$(".hackton").removeClass('hidden');
+				$(".hackton").jAnimateOnce("rubberBand");
+}else if (flag_hack == 1) {
+	$(".hackton").jAnimateOnce("fadeOut",function(){
+			$(".hackton").addClass('hidden');
+	});
+}
+
 });
 
 

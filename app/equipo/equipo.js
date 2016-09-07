@@ -32,7 +32,7 @@
     nombreCompleto:'Luis Alberto Villeda',
     carrera:'Logística',
     foto:'luis2.png',
-    twitter:'LuisTruVa',
+    twitter:'luis_villedac',
     subtitulo:'Siempre podemos aprender algo si estamos abiertos a estas posibilidades.',
     descripcionCorta:'Actualmente soy Coach de la Major League Hacking, entusiasta del trabajo colaborativo, apasionado por lo hackatones y por aprender nuevas cosas.',
     descripcion:'Entusiasta del trabajo colaborativo y estudiante de ingeniería en computación en la Facultad de Ingeniería de la UNAM, actualmente soy coach en la Major League Hacking, una organización internacional que se dedica a hacer hackathons todo el mundo para animar más aún estudiantes para crear algo sorprendente. He conocido a muchas personas del entorno empresarial , la tecnología y los hackers que son grandes fuentes de inspiración , algunos que he tenido oportunidad de enseñarles algo , pero en muchas ocasiones me he dado grandes lecciones . '
@@ -41,7 +41,7 @@
     nombreCompleto:'',
     carrera:'lic',
     foto:'danna.png',
-    twitter:'',
+    twitter:'danna_kiedis',
     subtitulo:'',
     descripcionCorta:'',
     descripcion:''
@@ -50,19 +50,19 @@
     nombreCompleto:'',
     carrera:'lic',
     foto:'rulo.png',
-    twitter:'',
+    twitter:'rulotico',
     subtitulo:'',
     descripcionCorta:'',
     descripcion:''
   },{
     nombre:'Pablo',
     nombreCompleto:'Pablo Trinidad',
-    carrera:'Hacker Experience',
+    carrera:'Hackers Experience',
     foto:'pablo.png',
     twitter:'pablotrinidadpa',
-    subtitulo:'',
-    descripcionCorta:'',
-    descripcion:''
+    subtitulo:'Inventive & MLH.',
+    descripcionCorta:'Fanático de los Hackathons y entusiasta de los servidores.',
+    descripcion:'Hola, soy Pablo. Actualmente trabajo con Major League Hacking apoyando participantes y organizadores de hackathons en todo el mundo. Hace un año comencé una casa de desarrollo de software llamada Inventive (también trabajo ahí ♥️). Me apasionan los proyectos Open Source, la enseñanza y el aprendizaje.'
   },{
     nombre:'Anuar',
     nombreCompleto:'Anuar Harb Becerra',
@@ -77,7 +77,7 @@
     nombreCompleto:'Zaphire Nomm',
     carrera:'Diseñadora gráfica y ambiental',
     foto:'sof.png',
-    twitter:'https://twitter.com/zaphirenomm',
+    twitter:'zaphirenomm',
     subtitulo:'Diseñadora Feelance. Apasionada por el rugby, los videojuegos y la animación',
     descripcionCorta:'Actualmente parte de Epic Queen, en proceso de titulación. Se siente muy orgullosa del diseño mexicano autóctono contemporáneo combinado con la actualidad.',
     descripcion:'Especializada en ilustración en busca de una maestría en animación, con miras de trabajar en proyectos de videojuegos. Participó en el diseño de Startup Weeken ITAM del 2015 y actualmente está en el concurso Interuniversitario de Animación creado y llevado acabo por Locomoción.'
@@ -88,23 +88,23 @@
     foto:'alex.png',
     twitter:'@alejandrotapiab',
     subtitulo:'',
-    descripcionCorta:'',
+    descripcionCorta:'Growth Hacker" Mentor y Consultor de Marketing Digital y Comercio Electrónico',
     descripcion:''
   },{
     nombre:'Carmen',
     nombreCompleto:'Carmen Cuevas',
     carrera:'Voluntarios y embajadores',
     foto:'carmen.png',
-    twitter:' CarmenCuJz  ',
+    twitter:'CarmenCuJz',
     subtitulo:'Creadora de mejores experiencias a las personas mediante el desarrollo web.',
     descripcionCorta:'Ella podrá ayudarte a crear y desarrollarte en esté maratón.',
     descripcion:'Organizadora y embajadora del GDG WonderCoders, Voluntaria en Voluntarios México, le apasiona transmitir sus conocimientos mediante eventos incluyentes. '
   },{
-    nombre:'Luis',
+    nombre:'LuisT',
     nombreCompleto:'Luis Trujillo',
     carrera:'Logística & patrocinios',
     foto:'luis.png',
-    twitter:'@LuisTruVa',
+    twitter:'LuisTruVa',
     subtitulo:'',
     descripcionCorta:'',
     descripcion:''
@@ -118,7 +118,7 @@
     descripcionCorta:'Mi primer hackathon fue MXHacks II, estuve también en el III así como en el hackathon y conferencia de Wikimanía 15.',
     descripcion:'Forme parte de un grupo de alumnos de la UNAM que participaron en la creación de un artículo científico con la Stanford University y en 2015 di una charla ignite en el DEV DAY 4 WOMAN'
   },{
-    nombre:'Luis',
+    nombre:'Ilario',
     nombreCompleto:'',
     carrera:'Lic. En Música',
     foto:'luis3.png',
