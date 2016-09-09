@@ -12,6 +12,9 @@
   <link href="/assets/css/main.css" rel="stylesheet" >
   <link href="/assets/css/registro.css" rel="stylesheet" >
   <link href="/assets/vendor/animate.css" rel="stylesheet" >
+  <!-- Tagit css -->
+  <link href="/assets/css/tag_it/tagit.css" rel="stylesheet" >
+  <link href="/assets/css/tag_it/tagit-zend.css" rel="stylesheet" >
 
 </head>
 <body class="bd">
@@ -114,16 +117,13 @@
         <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <div class="step3 hidden">
           <div class="col-xs-12 text-center inst">
-            <h4>¿Haz participado en otros hackathons?</h4>
+            <h4>¿Haz participado en otros hackathons? Escribe algunos</h4>
           </div>
           <div class="row l_hack l_1">
-            <div class="col-md-6 col-md-offset-3 col-xs-offset-1">
-              <div class="circle text-center" ex="true">
-                <h1> <span class="glyphicon glyphicon-ok"></span></h1>
-              </div>
-              <div class="circle text-center bad" ex="false">
-                <h1> <span class="glyphicon glyphicon-remove"></span></h1>
-              </div>
+            <div class="col-xs-10 col-xs-offset-1">
+              <div id="hack_form">
+                <ul id="hackTags"></ul>
+              </div>            
             </div>
             <div class="col-md-6 col-md-offset-3 hackton hidden">
               <input class="form-control input-lg" placeholder="¿Cuales?">
@@ -255,7 +255,12 @@
 
 
   <!--Third party -->
+  <!--
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  -->
+  <script src="/assets/js/jquery.js"></script>
+  <script src="/assets/js/jquery-ui.js"></script>
+  <script src="/assets/js/tagit.js"></script>
   <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="/assets/vendor/janimate.min.js"></script>
   <script src="/assets/js/registro.js"></script>

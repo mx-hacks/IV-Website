@@ -1,6 +1,4 @@
 
-
-
 //============================================  GET THE MAIL
 $.urlParam = function(name){
 	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
@@ -219,7 +217,7 @@ $(".btn_siguiente").click(function(event) {
 							$(".btn_siguiente").jAnimateOnce("fadeOut",function(){
 								$(".btn_siguiente").addClass('hidden');
 							});
-
+							sendHacks();
 
 
 				console.log("terminaste");
@@ -615,10 +613,58 @@ $(".work .circle").click(function(){
 
 
 
+// INVENTIVE
 
 
+// $(function(){
+    var hacks_url = 'https://api.mxhacks.mx/hackers/hackathons/',
+        sampleTags = [],
+        new_hacks = [],
+        hackTags = $('#hackTags');
 
+    $.get(hacks_url, function(data) {})
+        .done(function(data) {
+            for (hackathon in data)
+                sampleTags.push(data[hackathon].name);
+        })
+        .fail(function() {
+        });
 
+    var sendHacks = function () {
+    	new_hacks.forEach(function (hackathon) {
+            $.ajax({
+                url: hacks_url,
+                method: 'POST',
+                data: {name: hackathon},
+                success: function (response) {
+                    console.log(response);
+                },
+                error: function (response) {
+                    console.log(response);
+                }
+        	});
+    	});
+    };
+
+    hackTags.tagit({
+        availableTags: sampleTags,
+        afterTagAdded: function(evt, ui) {
+            
+            if($.inArray(ui.tagLabel, sampleTags) === -1)
+                new_hacks.push(ui.tagLabel);
+        },
+        afterTagRemoved: function(evt, ui) {
+
+            if($.inArray(ui.tagLabel, new_hacks) != -1)
+                new_hacks.splice($.inArray(ui.tagLabel, new_hacks),1);
+        },
+    });
+
+    $('#hackTags').tagit({
+        availableTags: sampleTags,
+        allowSpaces: true
+    });
+// });
 
 
 
