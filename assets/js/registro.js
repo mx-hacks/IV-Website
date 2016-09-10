@@ -26,6 +26,7 @@ var carrera;
 var experience;
 var hackatons;
 var selected_id;
+var accept;
 
 //============================================  GRADE
 
@@ -150,6 +151,16 @@ function escuelaNueva(data){
 }
 
 
+//=============================================  Acept
+
+
+$(".final_check").click(function(event) {
+	accept=true;
+});
+
+
+
+
 
 
 //============================================ MAIL PRINT
@@ -235,7 +246,12 @@ $(".btn_siguiente").click(function(event) {
 
 			}else if (step===3){
 
-						step3();
+
+
+
+				if (accept==true) {
+
+							step3();
 
 							$(".process .uno").addClass('pro_nice');
 							$(".process .dos").addClass('pro_nice');
@@ -261,6 +277,16 @@ $(".btn_siguiente").click(function(event) {
 
 
 				console.log("terminaste");
+
+				}else{
+
+
+		$(".message div").html("Acepta el codigo de conducta");
+	  	$(".message div").jAnimateOnce("fadeInUp");
+
+
+
+				}
 
 				
 
@@ -325,10 +351,10 @@ function step1(){
 	}else if(campus == ""){
 		$(".message div").html("Te falta el campus");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(inicio == ""){
+	}else if(inicio == "--"){
 		$(".message div").html("Te falta cuando iniciaste");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(fin == ""){
+	}else if(fin == "--"){
 		$(".message div").html("Te falta cuando vas a terminar la escuela");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(nivel == ""){
@@ -406,14 +432,14 @@ function step1(){
 
 
 		 	if (f1=true && f2==true) {return true}else{
-
+		 			return true;
 					$(".message div").html("Revisa de nuevo el formulario");
 				  	$(".message div").jAnimateOnce("fadeInUp");	
 
 		 	}
 
+		 	
 		 	return true;
-
 
 		 
 
@@ -519,11 +545,16 @@ function step3(){
 
 					  //-----------------------------------------
 
-					  // //-----------------------------------------
+					//-----------------------------------------
 
+
+				
 					    $.ajax({
-					        url: 'https://api.mxhacks.mx/applications/'+mail+'/finish/',
-					        type: 'PUT',
+					        url: 'https://api.mxhacks.mx/applications/'+mail+'/events/',
+					        type: 'POST',
+					        data: {
+					        	events: hackatons
+					        } ,
 					        success: function (res) {
 					            console.log(res);
 					            
@@ -533,6 +564,24 @@ function step3(){
 					            
 					        }
 					    });
+
+
+					  //-----------------------------------------
+
+					  // //-----------------------------------------
+
+					    // $.ajax({
+					    //     url: 'https://api.mxhacks.mx/applications/'+mail+'/finish/',
+					    //     type: 'PUT',
+					    //     success: function (res) {
+					    //         console.log(res);
+					            
+					    //     },
+					    //     error: function (res) {
+					    //         console.log(res);
+					            
+					    //     }
+					    // });
 
 
 					  // //-----------------------------------------
@@ -596,18 +645,40 @@ $(".l_1 .circle").click(function(){
 });
 
 
-$(".edic .circle").click(function(){
+
+	$(".non").click(function(event) {
+
 	$(".edic .circle").removeClass('pro_nice');
-	$(this).addClass('pro_nice');
-	hackatons=$(this).attr('hacks');
+	hackatons=[];
+
+	});
 
 
-});
+	$(".h1, .h2, .h3").click(function(event) {
+
+		$(this).addClass('pro_nice');
+			var hack_number=$(this).attr('hacks');
+
+		if (hack_number==0) {
+			hackatons="";
+		}else{
+			hackatons.push(Number(hack_number));
+		}
+
+	});
+
+
 
 
 $(".work .circle").click(function(){
 	$(".work .circle").removeClass('pro_nice');
 	$(this).addClass('pro_nice');
+
+	var h_number=$(this).attr('work');
+	worky=$(this).attr('work');
+	hackatons = jQuery.grep(hackatons, function(value) {
+	  return value != h_number;
+	});
 
 
 });

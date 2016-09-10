@@ -209,6 +209,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AFF45', end
 	cursor: pointer;
 }
 
+.circle h1{
+	    letter-spacing: 0 !important;
+}
 
 .size .circle:hover{
 	background: #5AFF45; /* Old browsers */
