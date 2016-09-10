@@ -616,60 +616,135 @@ $(".work .circle").click(function(){
 // INVENTIVE
 
 
-// $(function(){
-    var hacks_url = 'https://api.mxhacks.mx/hackers/hackathons/',
-        sampleTags = [],
-        new_hacks = [],
-        hackTags = $('#hackTags');
 
-    $.get(hacks_url, function(data) {})
-        .done(function(data) {
-            for (hackathon in data)
-                sampleTags.push(data[hackathon].name);
-        })
-        .fail(function() {
-        });
+// GET Hackathons
+var hacks_url = 'https://api.mxhacks.mx/hackers/hackathons/',
+    api_hackathons = [],
+    new_hacks = [],
+    hackTags = $('#hackTags');
 
-    var sendHacks = function () {
-    	new_hacks.forEach(function (hackathon) {
-            $.ajax({
-                url: hacks_url,
-                method: 'POST',
-                data: {name: hackathon},
-                success: function (response) {
-                },
-                
-                error: function (response) {
-                    console.log(response);
-                }
-        	});
-    	});
-    };
+$.get(hacks_url, function(data) {})
+    .done(function(data) {
+        for (hackathon in data)
+            api_hackathons.push(data[hackathon].name);
+    })
+    .fail(function() {
+    });
 
-    hackTags.tagit({
-        availableTags: sampleTags,
-        afterTagAdded: function(evt, ui) {
+var sendHacks = function () {
+	new_hacks.forEach(function (hackathon) {
+        $.ajax({
+            url: hacks_url,
+            method: 'POST',
+            data: {name: hackathon},
+            success: function (response) {
+            },
             
-            if($.inArray(ui.tagLabel, sampleTags) === -1)
-                new_hacks.push(ui.tagLabel);
-        },
-        afterTagRemoved: function(evt, ui) {
+            error: function (response) {
+                console.log(response);
+            }
+    	});
+	});
+};
 
-            if($.inArray(ui.tagLabel, new_hacks) != -1)
-                new_hacks.splice($.inArray(ui.tagLabel, new_hacks),1);
-        },
+hackTags.tagit({
+    availableTags: api_hackathons,
+    afterTagAdded: function(evt, ui) {
+        
+        if($.inArray(ui.tagLabel, api_hackathons) === -1)
+            new_hacks.push(ui.tagLabel);
+    },
+    afterTagRemoved: function(evt, ui) {
+
+        if($.inArray(ui.tagLabel, new_hacks) != -1)
+            new_hacks.splice($.inArray(ui.tagLabel, new_hacks),1);
+    },
+});
+
+$('#hackTags').tagit({
+    availableTags: api_hackathons,
+    allowSpaces: true
+});
+
+// GET Schools
+
+var schools_url = 'https://api.mxhacks.mx/hackers/schools/',
+	selected_id,
+    api_schools = [],
+    school_id = [],
+    new_shools = [];
+
+$.get(schools_url, function(data) {})
+    .done(function(data) {
+        for (school in data) {
+            api_schools.push(data[school].name);
+            school_id.push(data[school].id);
+        }
+
+    })
+    .fail(function() {
     });
 
-    $('#hackTags').tagit({
-        availableTags: sampleTags,
-        allowSpaces: true
-    });
-// });
+var sendHacks = function () {
+	new_shools.forEach(function (school) {
+        $.ajax({
+            url: schools_url,
+            method: 'POST',
+            data: {name: school},
+            success: function (response) {
+            },
+            
+            error: function (response) {
+                console.log(response);
+            }
+    	});
+	});
+};
+
+$("#school_list").autocomplete({
+  source: api_schools
+});
+
+$("#school_list").focusout(function () {
+	selected_id = $.inArray($("#school_list").val(), api_schools);
+	getCampus(selected_id);
+});
 
 
 
+var getCampus = function(selected_id) {
+	var campus_url = 'https://api.mxhacks.mx/hackers/schools/'+ school_id[selected_id] +'/campus/',
+    api_campus = [],
+    new_campus = [];
 
 
+	$.get(campus_url, function(data) {})
+	    .done(function(data) {
+	        for (campus in data)
+	            api_campus.push(data[campus].name);
+	    })
+	    .fail(function() {
+	    });
+
+	var sendHacks = function () {
+		new_campus.forEach(function (campus) {
+	        $.ajax({
+	            url: campus_url,
+	            method: 'POST',
+	            data: {name: $("#campus_list").val()},
+	            success: function (response) {
+	            },
+	            
+	            error: function (response) {
+	                console.log(response);
+	            }
+	    	});
+		});
+	};
+	$("#campus_list").autocomplete({
+		source: api_campus
+	});
+};
 
 
 
