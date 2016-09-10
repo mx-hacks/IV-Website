@@ -241,7 +241,7 @@ function step1(){
 	telefono = $(".telefono").val();
 	if (genero== "masculino" ) { male=true; female=false; }else{female=true; male=false;}
 	//-------------------------
-	
+	uni = $(".uni").val();
 	idu = $(".idu").val();
 	campus = $(".campus").val();
 	inicio = $(".inicio").val();
@@ -269,7 +269,7 @@ function step1(){
 	}else if(telefono.length < 8 || telefono.length > 15){
 		$(".message div").html("Tu teléfono esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(uni == "--"){
+	}else if(uni == ""){
 		$(".message div").html("Te falta la escuela");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(idu == ""){
