@@ -25,6 +25,7 @@ var carrera;
 
 var experience;
 var hackatons;
+var selected_id;
 
 //============================================  GRADE
 
@@ -106,12 +107,49 @@ var schools;
 					        
 					        },
 					        error: function (res) {
-					            console.log(res);
+					            
+					    			escuelaNueva(uni);
 					            
 					        }
 					    });
 
 });
+
+
+$('.campus').focusout(function () {
+	
+		retrieveCampus();
+		console.log(campus);
+
+});
+
+
+
+
+function escuelaNueva(data){
+
+
+	   					 $.ajax({
+
+					        url: 'https://api.mxhacks.mx/hackers/schools/',
+					        type: 'POST',
+					        data:{
+					        	name:uni
+					        },
+					        success: function (res) {
+					            console.log(res.id);
+					            uni=res.id;
+					        
+					        },
+					        error: function (res) {
+					            console.log(res);
+					            
+					        }
+					    });
+
+}
+
+
 
 
 //============================================ MAIL PRINT
@@ -234,16 +272,19 @@ $(".btn_siguiente").click(function(event) {
 
 
 function step1(){
+
 	name = $(".name").val();
 	lastn = $(".lastn").val();
 	edad = $(".edad").val();
 	genero = $(".genero").val();
 	telefono = $(".telefono").val();
 	if (genero== "masculino" ) { male=true; female=false; }else{female=true; male=false;}
+	pais = $(".pais").val();
+	estado = $(".estado").val();
 	//-------------------------
-	uni = $(".uni").val();
+	uni = selected_id
 	idu = $(".idu").val();
-	campus = $(".campus").val();
+	campus = campus
 	inicio = $(".inicio").val();
 	fin = $(".fin").val();
 	nivel = $(".nivel").val();
@@ -268,6 +309,12 @@ function step1(){
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(telefono.length < 8 || telefono.length > 15){
 		$(".message div").html("Tu teléfono esta mal");
+	  	$(".message div").jAnimateOnce("fadeInUp");
+	}else if(estado == ""){
+		$(".message div").html("Tu estado esta mal");
+	  	$(".message div").jAnimateOnce("fadeInUp");
+	}else if(pais == ""){
+		$(".message div").html("Tu país esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(uni == ""){
 		$(".message div").html("Te falta la escuela");
@@ -309,6 +356,8 @@ function step1(){
 					        	male:male,
 					        	female:female,
 					        	phone_number:telefono,
+					        	state:estado,
+					        	country:pais
 					        } ,
 					        success: function (res) {
 					            console.log(res);
@@ -324,55 +373,7 @@ function step1(){
 
 			//-----------------------------------------
 
-			camp=$( ".campus" ).hasClass("hidden");
-			var id_u=$(".uni").attr('attribute', 'value');
 
-if (camp == true ) {
-
-
- 						$.ajax({
-					        url: 'https://api.mxhacks.mx/hackers/schools/'+id_u+'/campus/',
-					        type: 'POST',
-					        data: { 
-					        
-					        	name: campus
-
-					        } ,
-					        success: function (res) {
-
-											    $.ajax({
-											        url: 'https://api.mxhacks.mx/applications/'+mail+'/education/',
-											        type: 'PUT',
-											        data: { 
-											        	school: uni,
-											        	campus: res.id,
-											        	school_join_year:inicio,
-											        	school_identification:idu,
-											        	school_graduation_year:fin,
-											        	education_level:nivel,
-											        	major:carrera
-											        } ,
-											        success: function (res) {
-											            console.log(res);
-											            console.log("f2");
-											            
-											        },
-											        error: function (res) {
-											            console.log(res);
-											            
-											        }
-											    });		
-
-
-					        },
-					        error: function (res) {
-					            console.log(res);
-					            
-					        }
-					    });
-
-
-}else{
 
 					    $.ajax({
 					        url: 'https://api.mxhacks.mx/applications/'+mail+'/education/',
@@ -389,6 +390,7 @@ if (camp == true ) {
 					        success: function (res) {
 					            console.log(res);
 					            console.log("f2");
+					            f2=true;
 					            
 					        },
 					        error: function (res) {
@@ -397,7 +399,7 @@ if (camp == true ) {
 					        }
 					    });
 
-}
+
 
 			//-----------------------------------------
 
@@ -723,6 +725,7 @@ $('#campus_list').focus(function () {
 	        for (campus in data) {
 	            api_campus.push(data[campus].name);
 	            campus_ids_list.push(data[campus].id);
+
 	        }
 	    })
 	    .fail(function() {
@@ -735,6 +738,7 @@ $('#campus_list').focus(function () {
 });
 
 var retrieveCampus = function () {
+	
 	var campus_index = $.inArray($("#campus_list").val(), api_campus);
 	if (campus_index < 0) {
 		$.ajax({
@@ -745,6 +749,7 @@ var retrieveCampus = function () {
 				console.log('****************************************************');
 				console.log('Este es el campus ID que tienes que mandar NUEVO');
 				console.log(response.id);
+				campus=response.id;
 				console.log('****************************************************');
 			}
 		});
@@ -752,8 +757,10 @@ var retrieveCampus = function () {
 		console.log('****************************************************');
 		console.log('Este es el campus ID que tienes que mandar');
 		console.log(campus_ids_list[campus_index]);
+		campus=campus_ids_list[campus_index];
 		console.log('****************************************************');
 	}
+	
 };
 
 
