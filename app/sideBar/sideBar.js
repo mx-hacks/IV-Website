@@ -84,7 +84,7 @@
       imgHover:'agendacolor',
       route:'/#agenda'
     },{
-      name:'Preguntas',
+      name:'FAQS',
       img:'faqs',
       imgHover:'faqscolor',
       route:'/#faq'
@@ -94,12 +94,12 @@
       imgHover:'becascolor',
       route:'/#beca'
     },{
-      name:'Apoyo',
+      name:'Apóyanos',
       img:'apoyo',
       imgHover:'apoyocolor',
       route:'/#apoyo'
     },{
-      name:'Evento',
+      name:'Sede',
       img:'evento',
       imgHover:'eventocolor',
       route:'/#evento'
@@ -109,7 +109,7 @@
       imgHover:'equipocolor',
       route:'equipo'
     },{
-      name:'Contacto',
+      name:'Patrocínanos',
       img:'contacto_g',
       imgHover:'contacto_r',
       route:'/#contacto'
