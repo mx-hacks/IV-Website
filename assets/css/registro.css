@@ -34,7 +34,9 @@ span{
 
 }
 
-
+.final_check{
+	color: #c3c3c3;
+}
 
 
 .required:after{
