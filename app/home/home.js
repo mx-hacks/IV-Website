@@ -47,7 +47,8 @@ function sendy(mail){
         success: function (res) {
             console.log(res);
           
-            window.location.href = "/registro.html?mail="+mail;
+            // window.location.href = "/registro.html?mail="+mail;
+            window.location.href ="https://docs.google.com/forms/d/1lH9Oyv5111g-QtjhzIi6X30c4RKy7BGUon--itZ6Y0A/edit?c=0&w=1";
         },
         error: function (res) {
             console.log(res);
