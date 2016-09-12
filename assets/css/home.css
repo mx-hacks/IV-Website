@@ -12,6 +12,13 @@
   opacity: .4;
 }
 
+.btn_prin{
+      background-color: #f40c5a;
+    color: aliceblue;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
 
 .home_f{
   background-image: url(../img/pantallas/aplica_ff.png);
