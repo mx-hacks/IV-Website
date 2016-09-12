@@ -27,6 +27,7 @@ var experience;
 var hackatons;
 var selected_id;
 var accept;
+var variable_var
 
 //============================================  GRADE
 
@@ -120,7 +121,6 @@ var schools;
 $('.campus').focusout(function () {
 	
 		retrieveCampus();
-		console.log(campus);
 
 });
 
@@ -140,6 +140,7 @@ function escuelaNueva(data){
 					        success: function (res) {
 					            console.log(res.id);
 					            uni=res.id;
+					            variable_var=uni;
 					        
 					        },
 					        error: function (res) {
@@ -261,7 +262,7 @@ $(".btn_siguiente").click(function(event) {
 							$(".step4").jAnimateOnce("fadeIn");
 							$(".conten_reg").jAnimateOnce("fadeIn");
 							});
-
+							$(".message").remove();
 
 							$(".inst").jAnimateOnce("fadeOut",function(){
 								$(".step4").removeClass('hidden');
@@ -308,9 +309,9 @@ function step1(){
 	pais = $(".pais").val();
 	estado = $(".estado").val();
 	//-------------------------
-	uni = school_id[selected_id];
+	// uni = selected_id
 	idu = $(".idu").val();
-	campus = campus;
+	// campus = campus
 	inicio = $(".inicio").val();
 	fin = $(".fin").val();
 	nivel = $(".nivel").val();
@@ -546,7 +547,7 @@ function step3(){
 
 					  //-----------------------------------------
 
-					//-----------------------------------------WORK
+					//-----------------------------------------
 
 
 				
@@ -569,23 +570,23 @@ function step3(){
 
 					  //-----------------------------------------
 
-					  // //-----------------------------------------
+					  //-----------------------------------------
 
-					    // $.ajax({
-					    //     url: 'https://api.mxhacks.mx/applications/'+mail+'/finish/',
-					    //     type: 'PUT',
-					    //     success: function (res) {
-					    //         console.log(res);
+					    $.ajax({
+					        url: 'https://api.mxhacks.mx/applications/'+mail+'/finish/',
+					        type: 'PUT',
+					        success: function (res) {
+					            console.log(res);
 					            
-					    //     },
-					    //     error: function (res) {
-					    //         console.log(res);
+					        },
+					        error: function (res) {
+					            console.log(res);
 					            
-					    //     }
-					    // });
+					        }
+					    });
 
 
-					  // //-----------------------------------------
+					  //-----------------------------------------
 
 
 
@@ -650,20 +651,24 @@ $(".l_1 .circle").click(function(){
 	$(".non").click(function(event) {
 
 	$(".edic .circle").removeClass('pro_nice');
-	hackatons=[];
+	hackatons="";
 
 	});
-
+var hack_number
 
 	$(".h1, .h2, .h3").click(function(event) {
 
 		$(this).addClass('pro_nice');
-			var hack_number=$(this).attr('hacks');
+			hack_number=$(this).attr('hacks');
 
 		if (hack_number==0) {
 			hackatons="";
-		}else{
-			hackatons.push(Number(hack_number));
+		}else if(hack_number==1 ){
+			hackatons+= "1"
+		}else if(hack_number==2 ){
+			hackatons+= "2"
+		}else if(hack_number==3 ){
+			hackatons+= "3"
 		}
 
 	});
@@ -677,11 +682,11 @@ $(".work .circle").click(function(){
 
 	var h_number=$(this).attr('work');
 	worky=$(this).attr('work');
-	if (worky=='true') { worky=true;}
-	if (worky=='false') { worky=false;}
-	hackatons = jQuery.grep(hackatons, function(value) {
-	  return value != h_number;
-	});
+	if (worky=="true") {worky=true;}
+	if (worky=="false") {worky=false;}
+	// hackatons = jQuery.grep(hackatons, function(value) {
+	//   return value != h_number;
+	// });
 
 
 });
@@ -690,7 +695,7 @@ $(".work .circle").click(function(){
 
 
 
-// INVENTIVE
+
 
 
 
@@ -785,12 +790,15 @@ $("#school_list").autocomplete({
 $("#school_list").focusout(function () {
 	selected_id = $.inArray($("#school_list").val(), api_schools);
 	$('#campus_list').attr('school', school_id[selected_id]);
-	console.log(school_id[selected_id]);
-	uni=school_id[selected_id];
+	variable_var=school_id[selected_id];
 });
 
+
+
+
 $('#campus_list').focus(function () {
-	campus_url = 'https://api.mxhacks.mx/hackers/schools/'+ school_id[selected_id] +'/campus/',
+	uni=variable_var;
+	campus_url = 'https://api.mxhacks.mx/hackers/schools/'+ uni +'/campus/',
     api_campus = [],
     new_campus = [],
     campus_ids_list = [];
