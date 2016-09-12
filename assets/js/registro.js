@@ -451,8 +451,9 @@ function step3(){
 			}
 		});
 
+
 		var hackathonsObj = {
-				hackathons: hackatons.slice(0,-1)
+			hackathons: hackatons.slice(0,-1)
 		};
 
 		var mxhackathonsObj = {
@@ -468,7 +469,18 @@ function step3(){
 			experienceObj.first_time_hacker = true;
 		}
 
-		putData(hackathonsObj, 3, function() {
+		if (hackathonsObj.hackatons) {
+			putData(hackathonsObj, 3, function() {
+				putData(mxhackathonsObj, 4, function() {
+					putData(experienceObj, 5, function() {
+						putData({}, 6, function(){
+							hideLoadDialog();
+							animate3();
+						});
+					});
+				});
+			});
+		}else{
 			putData(mxhackathonsObj, 4, function() {
 				putData(experienceObj, 5, function() {
 					putData({}, 6, function(){
@@ -477,7 +489,8 @@ function step3(){
 					});
 				});
 			});
-		});
+		}
+
 
 
 		//sendHacks();
