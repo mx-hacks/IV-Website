@@ -9,6 +9,7 @@ $.urlParam = function(name){
 
 //============================================  SEND DATA
 var mail = $.urlParam('mail');
+var promo;
 var name;
 var lastn;
 var edad;
@@ -22,12 +23,18 @@ var inicio;
 var fin;
 var nivel;
 var carrera;
+var worky;
 
 var experience;
-var hackatons;
 var selected_id;
 var accept;
 var variable_var
+
+var	size = "";
+var	food = "";
+
+var mxHackatons = "";
+var hackatons = "";
 
 //============================================  GRADE
 
@@ -37,17 +44,17 @@ var variable_var
 					        type: 'GET',
 					        success: function (res) {
 					            console.log(res);
-					            
+
 
 						            $.each(res, function( index, value ) {
 
 									  $(".nivel").append('<option value="'+value+'">'+value+'</option>');
 									});
-					        
+
 					        },
 					        error: function (res) {
 					            console.log(res);
-					            
+
 					        }
 					    });
 
@@ -62,17 +69,17 @@ var schools;
 					        type: 'GET',
 					        success: function (res) {
 					            console.log(res);
-					            
+
 
 						            $.each(res, function( index, value ) {
 
 									  $(".uni").append('<option value="'+value.id+'">'+value.name+'</option>');
 									});
-					        
+
 					        },
 					        error: function (res) {
 					            console.log(res);
-					            
+
 					        }
 					    });
 
@@ -83,7 +90,7 @@ var schools;
 
 				uni = $(".uni").val();
 
-				
+
 			   				$.ajax({
 					        url: 'https://api.mxhacks.mx/hackers/schools/'+uni+'/campus/',
 					        type: 'GET',
@@ -101,17 +108,17 @@ var schools;
 					            		$(".campus").html("");
 							            $.each(res, function( index, value ) {
 							            	$(".campus").append('<option value="'+value.id+'">'+value.name+'</option>');
-										  	
+
 										});
 
 						            }
 
-					        
+
 					        },
 					        error: function (res) {
-					            
+
 					    			escuelaNueva(uni);
-					            
+
 					        }
 					    });
 
@@ -119,7 +126,7 @@ var schools;
 
 
 $('.campus').focusout(function () {
-	
+
 		retrieveCampus();
 
 });
@@ -141,11 +148,11 @@ function escuelaNueva(data){
 					            console.log(res.id);
 					            uni=res.id;
 					            variable_var=uni;
-					        
+
 					        },
 					        error: function (res) {
 					            console.log(res);
-					            
+
 					        }
 					    });
 
@@ -156,7 +163,7 @@ function escuelaNueva(data){
 
 
 $(".final_check").click(function(event) {
-	accept=true;
+	accept = $(this).find("input").is(":checked")
 });
 
 
@@ -167,7 +174,7 @@ $(".final_check").click(function(event) {
 //============================================ MAIL PRINT
 
 var themail = $.urlParam('mail').split("@");
-var themail = themail[0]; 
+var themail = themail[0];
 $("#themail").html(themail);
 
 
@@ -190,113 +197,91 @@ $(function(){
 var step=1;
 
 $(".btn_siguiente").click(function(event) {
-		if (step===1) {
+	switch (step) {
+		case 1:
+			step1();
+			break;
+		case 2:
+			step2();
+			break;
+		case 3:
+			step3();
+			break;
+		default:
+	}
+});
 
-				if (step1() === true) {
-					retrieveCampus(); /* Acá obtienes el campus*/
-					$(".process").jAnimateOnce("fadeOut",function(){
-						$(".process div").removeClass('pro_nice');
-						$(".process .dos").addClass('pro_nice');
-					});
-					
-					$(".step1").jAnimateOnce("fadeOutDown",function(){
-						$(".step1").addClass('hidden');
-						$(".step2").removeClass('hidden');
-
-					
-
-							$(".step2").jAnimateOnce("fadeInUp");
-							$(".head_reg").jAnimateOnce("fadeIn");
-					});
-
-					$(".content_reg2").animate({
-						height: 0,
-						padding:0},
-						1000,function(){
-							$(".content_reg2").addClass('hidden');
-							$(".message").css({
-								color: 'aliceblue',
-								background: '#222222'
-							});
-
-						});
-
-					step+=1;
-				}
-
-
-			}else if (step===2) {
-
-				if(step2() == true){
-						$(".process div").removeClass('pro_nice');
-								$(".process .tres").addClass('pro_nice');
-
-						$(".step2").jAnimateOnce("fadeOut",function(){
-							$(".step2").addClass('hidden');
-							$(".step3").removeClass('hidden');
-							$(".step3").jAnimateOnce("fadeIn");
-
-						
-
-								$(".step1").jAnimateOnce("fadeInUp");
-								$(".head_reg").jAnimateOnce("fadeIn");
-						});
-
-					step+=1;
-				}
-
-			}else if (step===3){
-
-
-
-
-				if (accept==true) {
-
-							step3();
-
-							$(".process .uno").addClass('pro_nice');
-							$(".process .dos").addClass('pro_nice');
-							$(".step3").jAnimateOnce("fadeOut",function(){
-								$(".step3").addClass('hidden');
-								$(".step4").removeClass('hidden');
-							$(".step4").jAnimateOnce("fadeIn");
-							$(".conten_reg").jAnimateOnce("fadeIn");
-							});
-							$(".message").remove();
-
-							$(".inst").jAnimateOnce("fadeOut",function(){
-								$(".step4").removeClass('hidden');
-							});
-
-							$(".exclam").jAnimateOnce("fadeOut",function(){
-								$(".exclam").addClass('hidden');
-							});
-							$(".btn_siguiente").jAnimateOnce("fadeOut",function(){
-								$(".btn_siguiente").addClass('hidden');
-							});
-							sendHacks();
-
-
-				console.log("terminaste");
-
-				}else{
-
-
-		$(".message div").html("Acepta el codigo de conducta");
-	  	$(".message div").jAnimateOnce("fadeInUp");
-
-
-
-				}
-
-				
-
-
-			}
+function animate1(){
+	$(".process").jAnimateOnce("fadeOut",function(){
+		$(".process div").removeClass('pro_nice');
+		$(".process .dos").addClass('pro_nice');
 	});
-	
+
+	$(".step1").jAnimateOnce("fadeOutDown",function(){
+		$(".step1").addClass('hidden');
+		$(".step2").removeClass('hidden');
 
 
+
+			$(".step2").jAnimateOnce("fadeInUp");
+			$(".head_reg").jAnimateOnce("fadeIn");
+	});
+
+	$(".content_reg2").animate({
+		height: 0,
+		padding:0},
+		1000,function(){
+			$(".content_reg2").addClass('hidden');
+			$(".message").css({
+				color: 'aliceblue',
+				background: '#222222'
+			});
+
+		});
+
+	step+=1;
+}
+
+function animate2() {
+	$(".process div").removeClass('pro_nice');
+			$(".process .tres").addClass('pro_nice');
+
+	$(".step2").jAnimateOnce("fadeOut",function(){
+		$(".step2").addClass('hidden');
+		$(".step3").removeClass('hidden');
+		$(".step3").jAnimateOnce("fadeIn");
+
+
+
+			$(".step1").jAnimateOnce("fadeInUp");
+			$(".head_reg").jAnimateOnce("fadeIn");
+	});
+
+	step+=1;
+}
+
+function animate3(){
+	$(".process .uno").addClass('pro_nice');
+	$(".process .dos").addClass('pro_nice');
+	$(".step3").jAnimateOnce("fadeOut",function(){
+		$(".step3").addClass('hidden');
+		$(".step4").removeClass('hidden');
+	$(".step4").jAnimateOnce("fadeIn");
+	$(".conten_reg").jAnimateOnce("fadeIn");
+	});
+	$(".message").remove();
+
+	$(".inst").jAnimateOnce("fadeOut",function(){
+		$(".step4").removeClass('hidden');
+	});
+
+	$(".exclam").jAnimateOnce("fadeOut",function(){
+		$(".exclam").addClass('hidden');
+	});
+	$(".btn_siguiente").jAnimateOnce("fadeOut",function(){
+		$(".btn_siguiente").addClass('hidden');
+	});
+}
 
 function step1(){
 
@@ -310,15 +295,17 @@ function step1(){
 	estado = $(".estado").val();
 	//-------------------------
 	// uni = selected_id
+	uni_l = $("#school_list").val();
 	idu = $(".idu").val();
 	// campus = campus
 	inicio = $(".inicio").val();
 	fin = $(".fin").val();
 	nivel = $(".nivel").val();
 	carrera = $(".carrera").val();
+	campus_l = $("#campus_list").val();
+	promo = $(".code").val();
 
-
-// 	
+  //
 	if (name == "") {
 	  	$(".message div").html("Te falto el nombre");
 	  	$(".message div").jAnimateOnce("fadeInUp");
@@ -337,19 +324,31 @@ function step1(){
 	}else if(telefono.length < 8 || telefono.length > 15){
 		$(".message div").html("Tu teléfono esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(estado == ""){
-		$(".message div").html("Tu estado esta mal");
-	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(pais == ""){
 		$(".message div").html("Tu país esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
+	}else if(estado == ""){
+		$(".message div").html("Tu estado esta mal");
+	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(uni == ""){
+		$(".message div").html("Te falta la escuela");
+	  	$(".message div").jAnimateOnce("fadeInUp");
+	}else if(uni_l == ""){
 		$(".message div").html("Te falta la escuela");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(idu == ""){
 		$(".message div").html("Te falta tu id");
 	  	$(".message div").jAnimateOnce("fadeInUp");
+	}else if(carrera == ""){
+		$(".message div").html("Te falta tu carrera");
+	  	$(".message div").jAnimateOnce("fadeInUp");
+	}else if(nivel == "--"){
+		$(".message div").html("Te falta en que grado estas estudiando");
+	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(campus == ""){
+		$(".message div").html("Te falta el campus");
+	  	$(".message div").jAnimateOnce("fadeInUp");
+	}else if(campus_l == ""){
 		$(".message div").html("Te falta el campus");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(inicio == "--"){
@@ -358,141 +357,77 @@ function step1(){
 	}else if(fin == "--"){
 		$(".message div").html("Te falta cuando vas a terminar la escuela");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(nivel == ""){
-		$(".message div").html("Te falta en que grado estas estudiando");
-	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(carrera == ""){
-		$(".message div").html("Te falta tu carrera");
-	  	$(".message div").jAnimateOnce("fadeInUp");
 	}
 	  else{
 		 $(".message div").empty();
-
-		 	f1=false;
-		 	f2=false;
-			
 		 	//---------------------------------------
+			var personalData = {
+				first_name: name,
+				last_name: lastn,
+				age:edad,
+				male:male,
+				female:female,
+				phone_number:telefono,
+				state:estado,
+				country:pais
+			};
+			var schoolData = {
+				school: uni,
+				campus: campus,
+				school_join_year:inicio,
+				school_identification:idu,
+				school_graduation_year:fin,
+				education_level:nivel,
+				major:carrera
+			};
 
-					    $.ajax({
-					        url: 'https://api.mxhacks.mx/applications/'+mail+'/personal/',
-					        type: 'PUT',
-					        data: { 
-					        	first_name: name,
-					        	last_name: lastn,
-					        	age:edad,
-					        	male:male,
-					        	female:female,
-					        	phone_number:telefono,
-					        	state:estado,
-					        	country:pais
-					        } ,
-					        success: function (res) {
-					            console.log(res);
-					            console.log("f1");
-					            f1=true;
-					        },
-					        error: function (res) {
-					            console.log(res);
-					            
-					            
-					        }
-					    }); 
+			var sendMainData = function() {
+				putData(personalData, 1, function() {
+					putData(schoolData, 1.1, function() {
+						hideLoadDialog();
+						animate1();
+					});
+				});
+			};
 
-			//-----------------------------------------
-
-
-
-					    $.ajax({
-					        url: 'https://api.mxhacks.mx/applications/'+mail+'/education/',
-					        type: 'PUT',
-					        data: { 
-					        	school: uni,
-					        	campus: campus,
-					        	school_join_year:inicio,
-					        	school_identification:idu,
-					        	school_graduation_year:fin,
-					        	education_level:nivel,
-					        	major:carrera
-					        } ,
-					        success: function (res) {
-					            console.log(res);
-					            console.log("f2");
-					            f2=true;
-					            
-					        },
-					        error: function (res) {
-					            console.log(res);
-					            
-					        }
-					    });
+			if(promo == "" ) {
+				sendMainData();
+			} else {
+				var promoCodeObj = {
+					promo_code : promo
+				};
+				putData( promoCodeObj, 0, function(){
+					sendMainData();
+				});
+			}
 
 
-
-			//-----------------------------------------
-
-
-
-		 	if (f1=true && f2==true) {return true}else{
-		 			return true;
-					$(".message div").html("Revisa de nuevo el formulario");
-				  	$(".message div").jAnimateOnce("fadeInUp");	
-
-		 	}
-
-		 	
-		 	return true;
-
-		 
 
 	  }
 
-
 }
 
-//==================== step2 
-
-var	size="";
-var	food="";
-
+//==================== step2
 
 function step2(){
 	var	specials=$(".specs").val();
 	if (size== "" || food === "") {
-		
+
 	 	$(".message div").html("Revisa de nuevo el formulario");
 	 	$(".message div").jAnimateOnce("fadeInUp");
-	 	console.log("mal");
 	 	return false;
 	}else{
 		$(".message div").empty();
 
-		
-			//-----------------------------------------
-					    $.ajax({
-					        url: 'https://api.mxhacks.mx/applications/'+mail+'/goodies/',
-					        type: 'PUT',
-					        data: { 
-					        	tshirt_size:size,
-					        	dietary_restrictions:specials,
-					        } ,
-					        success: function (res) {
-					            console.log(res);
-					            console.log("f2");
-					            
-					        },
-					        error: function (res) {
-					            console.log(res);
-					            
-					        }
-					    });
+		var sizeFoodObj = {
+			tshirt_size:size,
+			dietary_restrictions:specials
+		};
 
-			//-----------------------------------------
-
-
-
-
-
-		return true;
+		putData(sizeFoodObj, 2, function() {
+			hideLoadDialog();
+			animate2();
+		});
 	}
 
 }
@@ -502,91 +437,59 @@ function step3(){
 
 
 
-					//-----------------------------------------
+	if (accept==true) {
+		var hackatonsPendant = [];
 
-					    $.ajax({
-					        url: 'https://api.mxhacks.mx/applications/'+mail+'/experience/',
-					        type: 'PUT',
-					        data: { 
-					        	first_time_hacker:experience,
-					        	currently_working:worky
-					        } ,
-					        success: function (res) {
-					            console.log(res);
-					            
-					        },
-					        error: function (res) {
-					            console.log(res);
-					            
-					        }
-					    });
+		hackTags.find(".tagit-label").each(function(index) {
+			var name = $(this).html();
+			for (var i = 0; i < api_hackathonsId.length; i++) {
+				if( name.replace(/\s+/g, '') == api_hackathonsId[i].name.replace(/\s+/g, '') ) {
+					hackatons += api_hackathonsId[i].id + ",";
+				} else {
+					hackatonsPendant.push(name);
+				}
+			}
+		});
 
+		var hackathonsObj = {
+				hackathons: hackatons.slice(0,-1)
+		};
 
-					  //-----------------------------------------
+		var mxhackathonsObj = {
+				events: mxHackatons.slice(0,-1)
+		};
 
-					//-----------------------------------------
+		var experienceObj = {
+			first_time_hacker:experience,
+			currently_working:worky
+		};
 
+		if (hackatons.length == 0 && mxHackatons.length == 0){
+			experienceObj.first_time_hacker = true;
+		}
 
-				
-					    $.ajax({
-					        url: 'https://api.mxhacks.mx/applications/'+mail+'/events/',
-					        type: 'POST',
-					        data: {
-					        	events: hackatons
-					        } ,
-					        success: function (res) {
-					            console.log(res);
-					            
-					        },
-					        error: function (res) {
-					            console.log(res);
-					            
-					        }
-					    });
-
-
-					  //-----------------------------------------
-
-					//-----------------------------------------
+		putData(hackathonsObj, 3, function() {
+			putData(mxhackathonsObj, 4, function() {
+				putData(experienceObj, 5, function() {
+					putData({}, 6, function(){
+						hideLoadDialog();
+						animate3();
+					});
+				});
+			});
+		});
 
 
-				
-					    $.ajax({
-					        url: 'https://api.mxhacks.mx/applications/'+mail+'/events/',
-					        type: 'POST',
-					        data: {
-					        	events: hackatons
-					        } ,
-					        success: function (res) {
-					            console.log(res);
-					            
-					        },
-					        error: function (res) {
-					            console.log(res);
-					            
-					        }
-					    });
+		//sendHacks();
+
+	} else{
+		
+		$(".message div").html("Acepta el codigo de conducta");
+		$(".message div").jAnimateOnce("fadeInUp");
 
 
-					  //-----------------------------------------
+	}
 
-					  //-----------------------------------------
-
-					    $.ajax({
-					        url: 'https://api.mxhacks.mx/applications/'+mail+'/finish/',
-					        type: 'PUT',
-					        success: function (res) {
-					            console.log(res);
-					            
-					        },
-					        error: function (res) {
-					            console.log(res);
-					            
-					        }
-					    });
-
-
-					  //-----------------------------------------
 
 
 
@@ -612,7 +515,7 @@ $(".love .circle").click(function(){
 	$(".love .circle").removeClass('pro_nice');
 	$(this).addClass('pro_nice');
 	$(".specs").jAnimateOnce("jello");
-	
+
 
 	food=$(this).attr('spec');
 	console.log(food);
@@ -649,26 +552,25 @@ $(".l_1 .circle").click(function(){
 
 
 	$(".non").click(function(event) {
-
-	$(".edic .circle").removeClass('pro_nice');
-	hackatons="";
-
+		$(".edic .circle").removeClass('pro_nice');
+		$(".non").addClass('pro_nice');
+		mxHackatons= "0";
 	});
 var hack_number
 
 	$(".h1, .h2, .h3").click(function(event) {
-
+		$(".non").removeClass('pro_nice');
 		$(this).addClass('pro_nice');
 			hack_number=$(this).attr('hacks');
 
 		if (hack_number==0) {
-			hackatons="";
+			mxHackatons= "";
 		}else if(hack_number==1 ){
-			hackatons+= "1"
+			mxHackatons+="1,";
 		}else if(hack_number==2 ){
-			hackatons+= "2"
+			mxHackatons+="2,";
 		}else if(hack_number==3 ){
-			hackatons+= "3"
+			mxHackatons+="3,";
 		}
 
 	});
@@ -702,13 +604,16 @@ $(".work .circle").click(function(){
 // GET Hackathons
 var hacks_url = 'https://api.mxhacks.mx/hackers/hackathons/',
     api_hackathons = [],
+    api_hackathonsId = [],
     new_hacks = [],
     hackTags = $('#hackTags');
 
 $.get(hacks_url, function(data) {})
     .done(function(data) {
-        for (hackathon in data)
-            api_hackathons.push(data[hackathon].name);
+        for (hackathon in data){
+					api_hackathons.push(data[hackathon].name);
+					api_hackathonsId.push({"id": data[hackathon].id, "name": data[hackathon].name});
+				}
     })
     .fail(function() {
     });
@@ -721,7 +626,7 @@ var sendHacks = function () {
             data: {name: hackathon},
             success: function (response) {
             },
-            
+
             error: function (response) {
                 console.log(response);
             }
@@ -732,7 +637,7 @@ var sendHacks = function () {
 hackTags.tagit({
     availableTags: api_hackathons,
     afterTagAdded: function(evt, ui) {
-        
+
         if($.inArray(ui.tagLabel, api_hackathons) === -1)
             new_hacks.push(ui.tagLabel);
     },
@@ -775,7 +680,7 @@ var sendHacks = function () {
             data: {name: school},
             success: function (response) {
             },
-            
+
             error: function (response) {
                 console.log(response);
             }
@@ -822,7 +727,7 @@ $('#campus_list').focus(function () {
 });
 
 var retrieveCampus = function () {
-	
+
 	var campus_index = $.inArray($("#campus_list").val(), api_campus);
 	if (campus_index < 0) {
 		$.ajax({
@@ -844,9 +749,68 @@ var retrieveCampus = function () {
 		campus=campus_ids_list[campus_index];
 		console.log('****************************************************');
 	}
-	
+
 };
 
 
 
-// ========================================================================================== 
+// ==========================================================================================
+
+
+
+function putData(obj, step, callback) {
+	var endpointUrl = "https://api.mxhacks.mx/applications/"+mail;
+	var method = "PUT";
+	switch (step) {
+		case 0:
+			endpointUrl = endpointUrl + "/promo_code/";
+			break;
+		case 1:
+			endpointUrl = endpointUrl + "/personal/";
+			break;
+		case 1.1:
+			endpointUrl = endpointUrl + "/education/";
+			break;
+		case 2:
+			endpointUrl = endpointUrl +'/goodies/';
+			break;
+		case 3:
+			endpointUrl = endpointUrl + '/hackathons/';
+			break;
+		case 4:
+			method = "POST";
+			endpointUrl = endpointUrl + '/events/';
+			break;
+		case 5:
+		 	endpointUrl = endpointUrl + '/experience/';
+		break
+		default:
+			endpointUrl = endpointUrl + '/finish/';
+		break;
+	}
+	showLoadDialog();
+	$.ajax({
+			url: endpointUrl,
+			type: method,
+			data: obj ,
+			success: function (res) {
+				console.log(res);
+				callback();
+			},
+			error: function (res) {
+				hideLoadDialog();
+				console.log(obj);
+				$(".message div").html("Revisa de nuevo el formulario");
+				$(".message div").jAnimateOnce("fadeInUp");
+			}
+	});
+
+}
+
+function showLoadDialog() {
+	$('#LoadDialog').fadeIn();
+}
+
+function hideLoadDialog() {
+	$('#LoadDialog').fadeOut();
+}

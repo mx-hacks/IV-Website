@@ -26,3 +26,71 @@
 .sponsorsImg {
   vertical-align: bottom;
 }
+
+.GE img{
+      height: 216px;
+}
+
+.tec{
+  padding-top: 64px;
+}
+
+
+.mlh{
+  margin-top: 43px
+}
+.mlh img{
+  max-width: 95px;
+}
+
+.sable{
+
+}
+
+.sable img{
+  height: 140px;
+}
+
+.guru{
+      margin-top: 15px;
+
+}
+.guru img{
+      height: 70px;
+}
+
+.rappi{
+      margin-top: 12px;
+}
+.rappi img{
+      height: 112px;
+}
+.in{
+  margin-top: 20px;
+}
+.in img{
+      height: 80px;
+}
+
+.tundra{
+      margin-top: 10px;
+}
+
+.tundra img{
+      height: 100px;
+}
+
+@media (max-width: 992px) {
+      .sable{
+        margin-top: 62px;
+      }
+      .sable img {
+    height: 163px;
+}
+.rappi img{
+  height: 123px;
+}
+.guru, .tundra{
+  margin-top: 55px;
+}
+}

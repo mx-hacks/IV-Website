@@ -34,6 +34,14 @@ function validateEmail(sEmail) {
 
 
 
+///===========================================================  TESTER
+
+
+
+testers=false;
+
+
+
 //===========================  input_MAIL HEADER
 
 
@@ -48,7 +56,11 @@ function sendy(mail){
             console.log(res);
           
             // window.location.href = "/registro.html?mail="+mail;
-            window.location.href ="https://docs.google.com/forms/d/1lH9Oyv5111g-QtjhzIi6X30c4RKy7BGUon--itZ6Y0A/edit?c=0&w=1";
+            if (testers==true) {
+              window.location.href = "/registro.html?mail="+mail; 
+            }else{
+              window.location.href ="https://docs.google.com/forms/d/1lH9Oyv5111g-QtjhzIi6X30c4RKy7BGUon--itZ6Y0A/edit?c=0&w=1";
+            }
         },
         error: function (res) {
             console.log(res);
@@ -105,3 +117,13 @@ var $input_email1 = $('.user').val();
                 }
     }
 });
+
+// ===============================   TESTER
+
+$(document).keypress(function(e) {
+    console.log(e.which);
+    if(e.which == 47) {
+        testers=true;
+    }
+});
+

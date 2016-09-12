@@ -1,5 +1,5 @@
 .bd{
-  background: url(../img/registro/back_registro.jpg) no-repeat center center fixed; 
+  background: url(../img/registro/back_registro.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,7 +26,7 @@ span{
 }
 
 .conten_reg{
-	
+
 	background-color: #222222;
 	min-height: 300px;
 	margin-top: 10vh;
@@ -112,9 +112,9 @@ hr{
 
 
 .circle img{
-	
+
 	margin-top: .6em;
-	
+
 }
 
 .exclam{
@@ -173,7 +173,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AFF45', end
 .content_reg2{
 	padding-top: 30px;
 	background-color: #F0F0F0;
-	
+
 }
 
 .content_reg3{
@@ -274,6 +274,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AFF45', end
 }
 .bad:hover{
 	background-color: #F40C5A !important;
+}
+
+/*==============DIALOG===============*/
+
+#LoadDialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.6);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#LoadDialog .cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#LoadDialog img{
+  width: 150px;
 }
 /*=============================*/
 @media (max-width: 992px) {
