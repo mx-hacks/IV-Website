@@ -308,9 +308,9 @@ function step1(){
 	pais = $(".pais").val();
 	estado = $(".estado").val();
 	//-------------------------
-	uni = selected_id
+	uni = school_id[selected_id];
 	idu = $(".idu").val();
-	campus = campus
+	campus = campus;
 	inicio = $(".inicio").val();
 	fin = $(".fin").val();
 	nivel = $(".nivel").val();
@@ -785,6 +785,8 @@ $("#school_list").autocomplete({
 $("#school_list").focusout(function () {
 	selected_id = $.inArray($("#school_list").val(), api_schools);
 	$('#campus_list').attr('school', school_id[selected_id]);
+	console.log(school_id[selected_id]);
+	uni=school_id[selected_id];
 });
 
 $('#campus_list').focus(function () {
