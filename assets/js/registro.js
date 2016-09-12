@@ -546,14 +546,16 @@ function step3(){
 
 					  //-----------------------------------------
 
+					//-----------------------------------------WORK
 
 
-
-					  //-----------------------------------------
-
+				
 					    $.ajax({
-					        url: 'https://api.mxhacks.mx/applications/'+mail+'/finish/',
-					        type: 'PUT',
+					        url: 'https://api.mxhacks.mx/applications/'+mail+'/events/',
+					        type: 'POST',
+					        data: {
+					        	events: hackatons
+					        } ,
 					        success: function (res) {
 					            console.log(res);
 					            
@@ -566,6 +568,24 @@ function step3(){
 
 
 					  //-----------------------------------------
+
+					  // //-----------------------------------------
+
+					    // $.ajax({
+					    //     url: 'https://api.mxhacks.mx/applications/'+mail+'/finish/',
+					    //     type: 'PUT',
+					    //     success: function (res) {
+					    //         console.log(res);
+					            
+					    //     },
+					    //     error: function (res) {
+					    //         console.log(res);
+					            
+					    //     }
+					    // });
+
+
+					  // //-----------------------------------------
 
 
 
@@ -650,23 +670,15 @@ $(".l_1 .circle").click(function(){
 
 
 
- worky=false;
-
 
 $(".work .circle").click(function(){
-
-
-
 	$(".work .circle").removeClass('pro_nice');
 	$(this).addClass('pro_nice');
 
 	var h_number=$(this).attr('work');
 	worky=$(this).attr('work');
-
 	if (worky=='true') { worky=true;}
 	if (worky=='false') { worky=false;}
-
-
 	hackatons = jQuery.grep(hackatons, function(value) {
 	  return value != h_number;
 	});
