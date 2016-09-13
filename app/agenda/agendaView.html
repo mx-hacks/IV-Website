@@ -1,4 +1,4 @@
-<section id="agenda" class="col-xs-12" ng-controller="agendaCrl as agenda">
+<section id="agenda" class="container" ng-controller="agendaCrl as agenda">
   <header class="col-xs-12">
     <div>
       <div class="rayitaSubitulo"></div>
@@ -6,8 +6,8 @@
     </div>
     <h2 class="col-xs-12 col-sm-8 col-sm-offset-2"><span>Agenda</span></h2>
   </header>
-  <div class="horarios col-xs-12 col-sm-10 col-sm-offset-1">
-    <article class="col-xs-12 col-sm-6" ng-repeat="horario in agenda.horarios">
+  <div class="horarios ">
+    <article class="col-xs-12 col-sm-6 fixtamp" ng-repeat="horario in agenda.horarios">
       <header class="headerHorario"> <span class="pink">·</span>{{horario.titulo}}  <span class="pink">·</span></header>
       <main class="col-xs-12 mainHorario">
         <div class="col-xs-12 separator">
@@ -15,7 +15,7 @@
           <h4 class="col-xs-7">Actividad</h4>
 
         </div>
-        <div class="col-xs-12" ng-repeat="dia in horario.dias">
+        <div class="col-xs-12 fixtamp" ng-repeat="dia in horario.dias">
           <h5 class="col-xs-5">{{dia.hora}}</h5>
           <h5 class="col-xs-7">{{dia.actividad}}</h5>
         </div>

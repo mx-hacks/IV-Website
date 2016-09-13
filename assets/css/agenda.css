@@ -50,4 +50,8 @@
   #agenda{
     max-height: initial;
   }
+  .fixtamp{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }

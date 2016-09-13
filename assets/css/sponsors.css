@@ -80,7 +80,17 @@ margin-top: 20px;
       height: 100px;
 }
 
+    .only-mobile{
+      display: none;
+    }
+
 @media (max-width: 992px) {
+    .only-mobile{
+      display: block;
+    }
+    .no-mobile{
+      display: none;
+    }
       .sable{
         margin-top: 62px;
       }
