@@ -378,7 +378,7 @@
 			};
 
 			var mxhackathonsObj = {
-					events: mxHackatons.slice(0,-1)
+				events: mxHackatons.slice(0,-1)
 			};
 
 			var experienceObj = {
@@ -557,13 +557,19 @@
 	    new_hacks = [],
 	    hackTags = $('#hackTags');
 
-	$.get(hacks_url, function(data) {})
-	    .done(function(data) {
-	        for (hackathon in data){
-				api_hackathons.push(data[hackathon].name);
-				api_hackathonsId.push({"id": data[hackathon].id, "name": data[hackathon].name});
-			}
-	    });
+	var getHackathons = function(){
+		api_hackathons = [],
+	    api_hackathonsId = [];
+		$.get(hacks_url, function(data) {})
+		    .done(function(data) {
+		        for (hackathon in data){
+					api_hackathons.push(data[hackathon].name);
+					api_hackathonsId.push({"id": data[hackathon].id, "name": data[hackathon].name});
+				}
+		    });
+	}
+
+	getHackathons();
 
 	var sendHacks = function () {
 		new_hacks.forEach(function (hackathon) {
@@ -572,8 +578,8 @@
 	            method: 'POST',
 	            data: {name: hackathon},
 	            success: function (response) {
+	            	getHackathons();  // Update hackatons
 	            },
-
 	            error: function (response) {
 	                console.log(response);
 	            }
@@ -584,9 +590,10 @@
 	hackTags.tagit({
 	    availableTags: api_hackathons,
 	    afterTagAdded: function(evt, ui) {
-
-	        if($.inArray(ui.tagLabel, api_hackathons) === -1)
+	        if($.inArray(ui.tagLabel, api_hackathons) === -1){
 	            new_hacks.push(ui.tagLabel);
+	            sendHacks();  // Create this hacks
+	        }
 	    },
 	    afterTagRemoved: function(evt, ui) {
 
@@ -619,21 +626,21 @@
 	    .fail(function() {
 	    });
 
-	var sendHacks = function () {
-		new_shools.forEach(function (school) {
-	        $.ajax({
-	            url: schools_url,
-	            method: 'POST',
-	            data: {name: school},
-	            success: function (response) {
-	            },
+	// var sendHacks = function () {
+	// 	new_shools.forEach(function (school) {
+	//         $.ajax({
+	//             url: schools_url,
+	//             method: 'POST',
+	//             data: {name: school},
+	//             success: function (response) {
+	//             },
 
-	            error: function (response) {
-	                console.log(response);
-	            }
-	    	});
-		});
-	};
+	//             error: function (response) {
+	//                 console.log(response);
+	//             }
+	//     	});
+	// 	});
+	// };
 
 	$("#school_list").autocomplete({
 	  source: api_schools
