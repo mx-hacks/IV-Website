@@ -392,12 +392,15 @@ function step1(){
 
 function step2(){
 	var	specials=$(".specs").val();
-	if (size== "" || food === "") {
-
-	 	$(".message div").html("Revisa de nuevo el formulario");
+	var show_error = function() {
+		$(".message div").html("Revisa de nuevo el formulario");
 	 	$(".message div").jAnimateOnce("fadeInUp");
-	 	return false;
-	}else{
+	};
+	if (size== "" || food === "") {
+		show_error();
+	} else if (food =="si" && specials == "")
+		show_error();
+	else{
 		$(".message div").empty();
 
 		var sizeFoodObj = {
@@ -415,7 +418,14 @@ function step2(){
 
 
 function step3(){
-	if (accept==true) {
+	if(worky == undefined ) {
+		$(".message div").html("Selecciona si trabajas o no");
+		$(".message div").jAnimateOnce("fadeInUp");
+	} else if (accept==false || accept== undefined) {
+		$(".message div").html("Acepta el codigo de conducta");
+		$(".message div").jAnimateOnce("fadeInUp");
+
+	} else{
 		var hackatonsPendant = [];
 
 		// separate hacks to know which strings should be posted
@@ -438,12 +448,6 @@ function step3(){
 			step3_two();
 		});
 
-
-
-
-	} else{
-		$(".message div").html("Acepta el codigo de conducta");
-		$(".message div").jAnimateOnce("fadeInUp");
 	}
 }
 
