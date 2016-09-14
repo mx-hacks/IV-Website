@@ -1,6 +1,6 @@
 #agenda {
   padding-top: 30px;
-  background-color: white;
+  /*background-color: white;*/
       max-height: 73vh;
 }
 #agenda header {
@@ -11,6 +11,7 @@
 }
 #agenda .horarios article {
   margin-bottom: 15px;
+      padding: 10px;
 }
 #agenda .headerHorario {
   border-bottom: 1px solid #F40C5A;
