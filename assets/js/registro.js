@@ -415,89 +415,86 @@ function step2(){
 
 
 function step3(){
-
-
-
 	if (accept==true) {
 		var hackatonsPendant = [];
 
+		// separate hacks to know which strings should be posted
 		hackTags.find(".tagit-label").each(function(index) {
 			var name = $(this).html();
+			var foundFlag = 0 ;
 			for (var i = 0; i < api_hackathonsId.length; i++) {
 				if( name.replace(/\s+/g, '') == api_hackathonsId[i].name.replace(/\s+/g, '') ) {
 					hackatons += api_hackathonsId[i].id + ",";
-				} else {
-					hackatonsPendant.push(name);
+					foundFlag = 1;
+				} else if(i == api_hackathonsId.length - 1 && foundFlag == 0){
+						hackatonsPendant.push(name);
 				}
 			}
 		});
 
-
-		var hackathonsObj = {
-			hackathons: hackatons.slice(0,-1)
-		};
-
-		var mxhackathonsObj = {
-				events: mxHackatons.slice(0,-1)
-		};
-
-		var experienceObj = {
-			first_time_hacker:experience,
-			currently_working:worky
-		};
-
-		if (hackathonsObj.hackatons!="" || mxhackathonsObj.events!="") {
-			experienceObj.first_time_hacker = false;
-		} else {
-			experienceObj.first_time_hacker = true;
-		}
-
-		var mainData = function () {
-			putData(experienceObj, 5, function() {
-				putData({}, 6, function(){
-					hideLoadDialog();
-					animate3();
-				});
-			});
-		};
-
-
-		if (hackathonsObj.hackatons!="" && mxhackathonsObj.events!="") {
-			putData(hackathonsObj, 3, function() {
-				putData(mxhackathonsObj, 4, function() {
-					mainData();
-				});
-			});
-		} else if (hackathonsObj.hackatons!="" && mxhackathonsObj.events == "" ){
-			putData(hackathonsObj, 3, function() {
-				mainData();
-			});
-		} else if( hackathonsObj.hackatons=="" && mxhackathonsObj.events!=""  ) {
-			putData(mxhackathonsObj, 4, function() {
-					mainData();
-			});
-		} else {
-			mainData();
-		}
+		//post new hacks and get it's ids
+		postHacks(hackatonsPendant, hackatonsPendant.length-1, function(){
+			hackatons += generatedIds;
+			step3_two();
+		});
 
 
 
-		//sendHacks();
 
 	} else{
-
 		$(".message div").html("Acepta el codigo de conducta");
 		$(".message div").jAnimateOnce("fadeInUp");
-
-
 	}
-
-
-
-
-
 }
 
+function step3_two() {
+	var hackathonsObj = {
+		hackathons: hackatons.slice(0,-1)
+	};
+
+	var mxhackathonsObj = {
+			events: mxHackatons.slice(0,-1)
+	};
+
+	var experienceObj = {
+		first_time_hacker:experience,
+		currently_working:worky
+	};
+
+	if (hackathonsObj.hackathons!="" || mxhackathonsObj.events!="") {
+		experienceObj.first_time_hacker = false;
+	} else {
+		experienceObj.first_time_hacker = true;
+	}
+
+	var mainData = function () {
+		putData(experienceObj, 5, function() {
+			putData({}, 6, function(){
+				hideLoadDialog();
+				animate3();
+			});
+		});
+	};
+
+
+	if (hackathonsObj.hackathons!="" && mxhackathonsObj.events!="") {
+		putData(hackathonsObj, 3, function() {
+			putData(mxhackathonsObj, 4, function() {
+				mainData();
+			});
+		});
+	} else if (hackathonsObj.hackathons!="" && mxhackathonsObj.events == "" ){
+		putData(hackathonsObj, 3, function() {
+			mainData();
+		});
+	} else if( hackathonsObj.hackathons=="" && mxhackathonsObj.events!=""  ) {
+		putData(mxhackathonsObj, 4, function() {
+			mainData();
+		});
+	} else {
+		mainData();
+	}
+}
 
 
 
@@ -594,10 +591,6 @@ $(".work .circle").click(function(){
 
 
 });
-
-
-
-
 
 
 
@@ -762,7 +755,32 @@ var retrieveCampus = function () {
 
 // ==========================================================================================
 
+var generatedIds = "";
+function postHacks(array, index, callback) {
 
+	if (index < 0) {
+		callback();
+		return true;
+	}
+
+	var obj = {
+		name: array[index]
+	};
+
+	$.ajax({
+			url: "https://api.mxhacks.mx/hackers/hackathons/",
+			type: 'POST',
+			data: obj ,
+			success: function (res) {
+				generatedIds += res.id + ",";
+				postHacks(array, index-1, callback);
+			},
+			error: function (res) {
+				console.log(res);
+			}
+	});
+
+}
 
 function putData(obj, step, callback) {
 	var endpointUrl = "https://api.mxhacks.mx/applications/"+mail;
@@ -800,12 +818,10 @@ function putData(obj, step, callback) {
 			type: method,
 			data: obj ,
 			success: function (res) {
-				console.log(res);
 				callback();
 			},
 			error: function (res) {
 				hideLoadDialog();
-				console.log(obj);
 				$(".message div").html("Revisa de nuevo el formulario");
 				$(".message div").jAnimateOnce("fadeInUp");
 			}
