@@ -17,7 +17,7 @@
     };
 
     var plan = [{
-      titulo:'Sábado 5 de noviembre',
+      titulo:'Sábado 12 de noviembre',
       dias:[{
         hora:'8:00 a.m - 9:00 a.m',
         actividad:'Salida autobuses de Metro Auditorio y Zapata'
@@ -44,7 +44,7 @@
         actividad:'Cena'
       }]
     },{
-      titulo:'Domingo 6 de noviembre',
+      titulo:'Domingo 13 de noviembre',
       dias:[{
         hora:'2.30 a.m',
         actividad:'Actividad',
