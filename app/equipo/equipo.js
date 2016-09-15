@@ -39,7 +39,7 @@
   },{
     nombre:'Danna',
     nombreCompleto:'Danna Kiedis',
-    carrera:'lic',
+    carrera:'Publicista por profesión, hacker por vocación.',
     foto:'danna.png',
     twitter:'danna_kiedis',
     subtitulo:'Publicista por profesión, hacker por vocación.',
@@ -111,7 +111,7 @@
   },{
     nombre:'Vero',
     nombreCompleto:'Verónica Jaramillo',
-    carrera:'lic',
+    carrera:'Logistica y patrocinios',
     foto:'vero.png',
     twitter:'',
     subtitulo:'Estudio en la ENP 2 UNAM, soy wikipedista, hacker y MUNer.',
@@ -120,7 +120,7 @@
   },{
     nombre:'Hilario',
     nombreCompleto:'',
-    carrera:'Lic. En Música',
+    carrera:'Contabilidad',
     foto:'luis3.png',
     twitter:'',
     subtitulo:'Musicólogo, Compositor de música contemporánea con código',

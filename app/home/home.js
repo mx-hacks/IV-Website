@@ -38,7 +38,7 @@ function validateEmail(sEmail) {
 
 
 
-testers=false;
+testers=true;
 
 
 
