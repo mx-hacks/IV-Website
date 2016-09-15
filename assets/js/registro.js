@@ -285,12 +285,15 @@ function step1(){
 	carrera = $(".carrera").val();
 	campus_l = $("#campus_list").val();
 	promo = $(".code").val();
+	limit = 1;
 
-  //
-	if (name == "") {
+	if (campus== undefined) { campus = "";}
+	if (uni== undefined) { uni = "";}
+
+	if (name == "" || name.length <= limit) {
 	  	$(".message div").html("Te falto el nombre");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(lastn == ""){
+	}else if(lastn == "" || lastn.length <= limit){
 		$(".message div").html("Te falta el apellido");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(edad == "--"){
@@ -299,37 +302,37 @@ function step1(){
 	}else if(genero == "--"){
 		$(".message div").html("Te falta el género");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(telefono == ""){
+	}else if(telefono == "" ){
 		$(".message div").html("Te falta tu teléfono");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(telefono.length < 8 || telefono.length > 15){
 		$(".message div").html("Tu teléfono esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(pais == ""){
+	}else if(pais == "" || pais.length <= limit){
 		$(".message div").html("Tu país esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(estado == ""){
+	}else if(estado == "" || estado.length <= limit){
 		$(".message div").html("Tu estado esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(uni == ""){
+	}else if(uni == "" || uni.length <= limit ){
+			$(".message div").html("Te falta la escuela");
+	  		$(".message div").jAnimateOnce("fadeInUp");
+	}else if(uni_l == "" || uni_l.length <= limit){
 		$(".message div").html("Te falta la escuela");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(uni_l == ""){
-		$(".message div").html("Te falta la escuela");
-	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(idu == ""){
+	}else if(idu == "" || idu.length <= limit){
 		$(".message div").html("Te falta tu id");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(carrera == ""){
+	}else if(carrera == "" || carrera.length <= limit){
 		$(".message div").html("Te falta tu carrera");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(nivel == "--"){
 		$(".message div").html("Te falta en que grado estas estudiando");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(campus == ""){
-		$(".message div").html("Te falta el campus");
-	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(campus_l == ""){
+	}else if(campus == "" || campus.length <= limit){		
+				$(".message div").html("Te falta el campus");
+			  	$(".message div").jAnimateOnce("fadeInUp");
+	}else if(campus_l == "" || campus_l.length <= limit){
 		$(".message div").html("Te falta el campus");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(inicio == "--"){
@@ -362,14 +365,19 @@ function step1(){
 				major:carrera
 			};
 
-			var sendMainData = function() {
-				putData(personalData, 1, function() {
-					putData(schoolData, 1.1, function() {
-						hideLoadDialog();
-						animate1();
+			if (uni.length <= limit || campus.length <=limit ) {
+				$(".message div").html("Son muy pocos caracteres en campus o escuela");
+			  	$(".message div").jAnimateOnce("fadeInUp");
+			}else{
+				var sendMainData = function() {
+					putData(personalData, 1, function() {
+						putData(schoolData, 1.1, function() {
+							hideLoadDialog();
+							animate1();
+						});
 					});
-				});
-			};
+				};
+			}
 
 			if(promo == "" ) {
 				sendMainData();
