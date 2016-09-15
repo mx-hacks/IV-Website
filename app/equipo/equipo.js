@@ -28,7 +28,7 @@
     descripcionCorta:'He sido parte de la Major League Hacking (MLH) por aproximadamente dos años y el MXHacks IV es el tercer MXHacks que soy parte del comité organizador.',
     descripcion:'Fui co-fundadora del Google Developer Group Polymer México y Wonder Coders. En el pasado trabajé como sensei en Devf y actualmente soy parte de una Startup llamada Alter'
   },{
-    nombre:'Luis',
+    nombre:'Alberto',
     nombreCompleto:'Luis Alberto Villeda',
     carrera:'Logística',
     foto:'luis2.png',
@@ -38,21 +38,21 @@
     descripcion:'Entusiasta del trabajo colaborativo y estudiante de ingeniería en computación en la Facultad de Ingeniería de la UNAM, actualmente soy coach en la Major League Hacking, una organización internacional que se dedica a hacer hackathons todo el mundo para animar más aún estudiantes para crear algo sorprendente. He conocido a muchas personas del entorno empresarial , la tecnología y los hackers que son grandes fuentes de inspiración , algunos que he tenido oportunidad de enseñarles algo , pero en muchas ocasiones me he dado grandes lecciones . '
   },{
     nombre:'Danna',
-    nombreCompleto:'',
+    nombreCompleto:'Danna Kiedis',
     carrera:'lic',
     foto:'danna.png',
     twitter:'danna_kiedis',
-    subtitulo:'',
-    descripcionCorta:'',
+    subtitulo:'Publicista por profesión, hacker por vocación.',
+    descripcionCorta:'Fundadora de .SABLE., un estudio dedicado al desarrollo de creatividad digital basada en nuevas tecnologías, junto a su equipo desarrollo y diseño MX Hacks IV basado en querer demostrar que en México también hay talento para desarrollar ideas. Amante de la organización y la creatividad, busca lograr la integración de más mujeres a la tecnología, actualmente es líder de la comunidad de Epic Queen CDMX. Parte del bacth 5 de Dev.f, emprendedora y amante del tequila. ',
     descripcion:''
   },{
-    nombre:'Rulo',
-    nombreCompleto:'',
-    carrera:'lic',
+    nombre:'Rulótico',
+    nombreCompleto:'Rulótico González',
+    carrera:'Interactive Design',
     foto:'rulo.png',
     twitter:'rulotico',
     subtitulo:'',
-    descripcionCorta:'',
+    descripcionCorta:'Diseñador Interactivo, creativo, coder, designer, motion, cool guy, inventor y dance dance baby, me encuentras como rulotico y la prueba de que los unicornios si existen (code + design)',
     descripcion:''
   },{
     nombre:'Pablo',
@@ -89,7 +89,7 @@
     twitter:'@alejandrotapiab',
     subtitulo:'',
     descripcionCorta:'Growth Hacker" Mentor y Consultor de Marketing Digital y Comercio Electrónico',
-    descripcion:''
+    descripcion:'Growth Hacker" Mentor y Consultor de Marketing Digital y Comercio Electrónico'
   },{
     nombre:'Carmen',
     nombreCompleto:'Carmen Cuevas',
@@ -100,14 +100,14 @@
     descripcionCorta:'Ella podrá ayudarte a crear y desarrollarte en esté maratón.',
     descripcion:'Organizadora y embajadora del GDG WonderCoders, Voluntaria en Voluntarios México, le apasiona transmitir sus conocimientos mediante eventos incluyentes. '
   },{
-    nombre:'LuisT',
+    nombre:'Luis',
     nombreCompleto:'Luis Trujillo',
     carrera:'Logística & patrocinios',
     foto:'luis.png',
     twitter:'LuisTruVa',
     subtitulo:'',
-    descripcionCorta:'',
-    descripcion:''
+    descripcionCorta:'Estudiante/persona/joven emprendedor buscando nuevas oportunidades de aprender y conocer gente nueva. También tiene muchas ganas de cambiar el lugar donde vivimos por medio de la tecnología.',
+    descripcion:'Estudiante/persona/joven emprendedor buscando nuevas oportunidades de aprender y conocer gente nueva. También tiene muchas ganas de cambiar el lugar donde vivimos por medio de la tecnología.'
   },{
     nombre:'Vero',
     nombreCompleto:'Verónica Jaramillo',
@@ -118,7 +118,7 @@
     descripcionCorta:'Mi primer hackathon fue MXHacks II, estuve también en el III así como en el hackathon y conferencia de Wikimanía 15.',
     descripcion:'Forme parte de un grupo de alumnos de la UNAM que participaron en la creación de un artículo científico con la Stanford University y en 2015 di una charla ignite en el DEV DAY 4 WOMAN'
   },{
-    nombre:'Ilario',
+    nombre:'Hilario',
     nombreCompleto:'',
     carrera:'Lic. En Música',
     foto:'luis3.png',
