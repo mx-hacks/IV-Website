@@ -135,7 +135,7 @@
         <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <div class="step3 hidden">
           <div class="col-xs-12 text-center inst">
-            <h4>¿Haz participado en otros hackathons? Escribe a continuación:</h4>
+            <h4>Si haz participado en otros hackathons escríbelos a continuación:</h4>
           </div>
           <div class="row l_hack l_1">
             <div class="col-xs-10 col-xs-offset-1">
@@ -193,7 +193,7 @@
              Si eres seleccionado serás notificado a partir del 23 de Octubre.
           </h2>
           <br>
-          <a href="/" class="back"> Regresar al home</a>
+          <a href="/" class="back" onclick="ga('send', 'event', 'btn_final_home', 'back')" > Regresar al home</a>
         </div>
         <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
       </div>
@@ -275,7 +275,7 @@
             <div></div>
           </div>
       <div class="col-sm-8 col-sm-offset-2 col-xs-12 content_reg3">
-        <div class="btn_siguiente col-xs-6 col-xs-offset-3 text-center">SIGUIENTE</div>
+        <div class="btn_siguiente col-xs-6 col-xs-offset-3 text-center" onclick="ga('send', 'event', 'btn_xsection', 'next')">SIGUIENTE</div>
       </div>
     </div>
   </div>
@@ -298,6 +298,27 @@
   <script src="/assets/vendor/janimate.min.js"></script>
   <script src="/assets/js/registro.js"></script>
   <!--end of Third party-->
+
+<!-- =========== -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-84354745-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<!-- =========== -->
+
+
+
+
+
 
 </body>
 </html>
