@@ -66,3 +66,9 @@
    background-color: #c70c3f;
    color: #961236;
 }
+
+@media (max-width: 780px) {
+  #home {
+  background-image: url(../img/fondos/mobile_index.png);
+  }
+}
