@@ -285,15 +285,12 @@ function step1(){
 	carrera = $(".carrera").val();
 	campus_l = $("#campus_list").val();
 	promo = $(".code").val();
-	limit = 1;
 
-	if (campus== undefined) { campus = "";}
-	if (uni== undefined) { uni = "";}
-
-	if (name == "" || name.length <= limit) {
+  //
+	if (name == "") {
 	  	$(".message div").html("Te falto el nombre");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(lastn == "" || lastn.length <= limit){
+	}else if(lastn == ""){
 		$(".message div").html("Te falta el apellido");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(edad == "--"){
@@ -302,37 +299,37 @@ function step1(){
 	}else if(genero == "--"){
 		$(".message div").html("Te falta el género");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(telefono == "" ){
+	}else if(telefono == ""){
 		$(".message div").html("Te falta tu teléfono");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(telefono.length < 8 || telefono.length > 15){
 		$(".message div").html("Tu teléfono esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(pais == "" || pais.length <= limit){
+	}else if(pais == ""){
 		$(".message div").html("Tu país esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(estado == "" || estado.length <= limit){
+	}else if(estado == ""){
 		$(".message div").html("Tu estado esta mal");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(uni == "" || uni.length <= limit ){
-			$(".message div").html("Te falta la escuela");
-	  		$(".message div").jAnimateOnce("fadeInUp");
-	}else if(uni_l == "" || uni_l.length <= limit){
+	}else if(uni == ""){
 		$(".message div").html("Te falta la escuela");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(idu == "" || idu.length <= limit){
+	}else if(uni_l == ""){
+		$(".message div").html("Te falta la escuela");
+	  	$(".message div").jAnimateOnce("fadeInUp");
+	}else if(idu == ""){
 		$(".message div").html("Te falta tu id");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(carrera == "" || carrera.length <= limit){
+	}else if(carrera == ""){
 		$(".message div").html("Te falta tu carrera");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(nivel == "--"){
 		$(".message div").html("Te falta en que grado estas estudiando");
 	  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(campus == "" || campus.length <= limit){		
-				$(".message div").html("Te falta el campus");
-			  	$(".message div").jAnimateOnce("fadeInUp");
-	}else if(campus_l == "" || campus_l.length <= limit){
+	}else if(campus == ""){
+		$(".message div").html("Te falta el campus");
+	  	$(".message div").jAnimateOnce("fadeInUp");
+	}else if(campus_l == ""){
 		$(".message div").html("Te falta el campus");
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(inicio == "--"){
@@ -340,9 +337,33 @@ function step1(){
 	  	$(".message div").jAnimateOnce("fadeInUp");
 	}else if(fin == "--"){
 		$(".message div").html("Te falta cuando vas a terminar la escuela");
-	  	$(".message div").jAnimateOnce("fadeInUp");
+	  $(".message div").jAnimateOnce("fadeInUp");
+	} else if(  name.length < 3) {
+		$(".message div").html("Nombre debe tener al menos de 3 caracteres");
+	  $(".message div").jAnimateOnce("fadeInUp");
+	} else if(	lastn.length < 3) {
+		$(".message div").html("Apellido debe tener al menos de 3 caracteres");
+		$(".message div").jAnimateOnce("fadeInUp");
+	} else if(	pais.length < 3) {
+		$(".message div").html("País debe tener al menos de 3 caracteres");
+		$(".message div").jAnimateOnce("fadeInUp");
+	} else if(estado.length < 3) {
+		$(".message div").html("Estado debe tener al menos de 3 caracteres");
+		$(".message div").jAnimateOnce("fadeInUp");
+	} else if(uni_l.length < 3) {
+		$(".message div").html("Universidad debe tener al menos de 3 caracteres");
+		$(".message div").jAnimateOnce("fadeInUp");
+	} else if(idu.length < 3) {
+		$(".message div").html("Matrícula debe tener al menos de 3 caracteres");
+		$(".message div").jAnimateOnce("fadeInUp");
+	} else if(carrera.length < 3) {
+		$(".message div").html("Carrera debe tener al menos de 3 caracteres");
+		$(".message div").jAnimateOnce("fadeInUp");
+	} else if(campus.length < 3) {
+		$(".message div").html("Campus debe tener al menos de 3 caracteres");
+		$(".message div").jAnimateOnce("fadeInUp");
 	}
-	  else{
+	 else{
 		 $(".message div").empty();
 		 	//---------------------------------------
 			var personalData = {
@@ -365,19 +386,14 @@ function step1(){
 				major:carrera
 			};
 
-			if (uni.length <= limit || campus.length <=limit ) {
-				$(".message div").html("Son muy pocos caracteres en campus o escuela");
-			  	$(".message div").jAnimateOnce("fadeInUp");
-			}else{
-				var sendMainData = function() {
-					putData(personalData, 1, function() {
-						putData(schoolData, 1.1, function() {
-							hideLoadDialog();
-							animate1();
-						});
+			var sendMainData = function() {
+				putData(personalData, 1, function() {
+					putData(schoolData, 1.1, function() {
+						hideLoadDialog();
+						animate1();
 					});
-				};
-			}
+				});
+			};
 
 			if(promo == "" ) {
 				sendMainData();
@@ -406,8 +422,12 @@ function step2(){
 	};
 	if (size== "" || food === "") {
 		show_error();
-	} else if (food =="si" && specials == "")
+	} else if (food =="si" && specials == ""){
 		show_error();
+	} else if(food =="si" && specials.length <3) {
+		$(".message div").html("Restricción debe tener al menos de 3 caracteres");
+		$(".message div").jAnimateOnce("fadeInUp");
+	}
 	else{
 		$(".message div").empty();
 
@@ -437,18 +457,26 @@ function step3(){
 		var hackatonsPendant = [];
 
 		// separate hacks to know which strings should be posted
-		hackTags.find(".tagit-label").each(function(index) {
-			var name = $(this).html();
-			var foundFlag = 0 ;
-			for (var i = 0; i < api_hackathonsId.length; i++) {
-				if( name.replace(/\s+/g, '') == api_hackathonsId[i].name.replace(/\s+/g, '') ) {
-					hackatons += api_hackathonsId[i].id + ",";
-					foundFlag = 1;
-				} else if(i == api_hackathonsId.length - 1 && foundFlag == 0){
+		var api_hackathonsIdLenght = api_hackathonsId.length;
+		if (api_hackathonsIdLenght == 0) { // if no hackthons exist in the database
+			hackTags.find(".tagit-label").each(function(index) {
+				hackatonsPendant.push(name);
+			});
+		} else {
+			hackTags.find(".tagit-label").each(function(index) {
+				var name = $(this).html();
+				var foundFlag = 0 ;
+
+				for (var i = 0; i < api_hackathonsIdLenght; i++) {
+					if( name.replace(/\s+/g, '') == api_hackathonsId[i].name.replace(/\s+/g, '') ) {
+						hackatons += api_hackathonsId[i].id + ",";
+						foundFlag = 1;
+					} else if(i == api_hackathonsId.length - 1 && foundFlag == 0){
 						hackatonsPendant.push(name);
+					}
 				}
-			}
-		});
+			});
+		}
 
 		//post new hacks and get it's ids
 		postHacks(hackatonsPendant, hackatonsPendant.length-1, function(){

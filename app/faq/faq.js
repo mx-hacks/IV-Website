@@ -50,6 +50,6 @@
       respuesta:'Deberás contar con tu credencial de estudiante, tu laptop con su cargador, cargador de celular, gadgets y todo lo que necesites para estimular tu creatividad. Recuerda que está prohibido entrar con armas, drogas y/o alcohol.',
       img2:'icon11',
       titulo2:'¿Habrá premios?',
-      respuesta2:'Sí, pero recuerda que no sólo se trata de lo que puedes ganar sino también de lo que aprendas y construyas en 36 horas para demostrar en en México también estamos generando un gran avance en creación de tecnología . Al final del evento habrá un panel de jueces quienes juzgarán los proyectos y elegirán a los tres mejores basado en la creatividad, dificultad técnica, diseño y aplicabilidad.',
+      respuesta2:'Sí, pero recuerda que no sólo se trata de lo que puedes ganar sino también de lo que aprendas y construyas en 36 horas para demostrar que en México también estamos generando un gran avance en creación de tecnología . Al final del evento habrá un panel de jueces quienes juzgarán los proyectos y elegirán a los tres mejores basado en la creatividad, dificultad técnica, diseño y aplicabilidad.',
     }]
 })();
