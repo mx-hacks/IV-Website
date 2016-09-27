@@ -862,7 +862,13 @@ function putData(obj, step, callback) {
 			},
 			error: function (res) {
 				hideLoadDialog();
-				$(".message div").html("Revisa de nuevo el formulario");
+				if (res.responseJSON.message == "Application closed.") {
+					$(".message div").html("Ya existe una aplicación terminada con este email.");
+				}
+				else {
+					$(".message div").html("Revisa de nuevo el formulario");
+				}
+
 				$(".message div").jAnimateOnce("fadeInUp");
 			}
 	});
