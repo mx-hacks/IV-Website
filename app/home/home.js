@@ -44,23 +44,22 @@ function validateEmail(sEmail) {
 
 function sendy(mail){
 
-    $.ajax({
-        url: 'https://api.mxhacks.mx/applications/',
-        type: 'POST',
-        data: { email: mail} ,
-        success: function (res) {
-            console.log(res);
-          
-            window.location.href = "/registro.html?mail="+mail;
+  $.ajax({
+      url: 'https://api.mxhacks.mx/applications/',
+      type: 'POST',
+      data: { email: mail} ,
+      success: function (res) {
+        window.location.href = "/registro.html?mail="+mail;
+      },
 
-        },
-        error: function (res) {
-            console.log(res);
-                        $(".msg").removeClass('hidden');
-            $(".msg").jAnimate("fadeInDown",function(){});
-            
+      error: function (res) {
+        if (res.responseJSON.email[0] === "Ya existe un/a hacker con este/a email.") {
+          window.location.href = "/registro.html?mail="+mail;
         }
-    }); 
+        $(".msg").removeClass('hidden');
+        $(".msg").jAnimate("fadeInDown",function(){}); 
+      }
+  }); 
 
 
 
