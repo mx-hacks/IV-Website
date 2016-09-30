@@ -37,14 +37,14 @@
 
 
 .mlh{
-  margin-top: 43px
+ margin-bottom: 50px;
 }
 .mlh img{
-  max-width: 95px;
+  max-width: 120px;
 }
 
 .sable{
-margin-top: 20px;
+margin-top: -15px;
 }
 
 .sable img{
@@ -85,15 +85,17 @@ margin-top: 20px;
     }
 
 @media (max-width: 992px) {
+
     .only-mobile{
       display: block;
     }
     .no-mobile{
       display: none;
     }
-      .sable{
-        margin-top: 62px;
-      }
+.mlh{
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
       .sable img {
     height: 163px;
 }
