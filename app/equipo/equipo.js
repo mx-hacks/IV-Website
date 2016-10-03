@@ -40,7 +40,7 @@
   var equipo = [{
     nombre:'Margot',
     nombreCompleto:'Margot Duek',
-    carrera:'Tecnologías Computacionales',
+    carrera:'Team Leader',
     foto:'margot.png',
     twitter:'duekis',
     subtitulo:'Estudiante de Ingeniería en Tecnologías Computacionales en el Tec de Monterrey, Líder de MxHacks',
