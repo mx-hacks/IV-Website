@@ -34,7 +34,9 @@
 .tec{
   padding-top: 64px;
 }
-
+.brand .col-md-3{
+  width: 20%;
+}
 
 .mlh{
  margin-bottom: 50px;
@@ -47,7 +49,7 @@
 margin-top: -15px;
 }
 .dev{
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .sable img{
   height: 154px;
@@ -73,7 +75,10 @@ margin-top: -15px;
 .in img{
       height: 80px;
 }
-
+.plat img{
+  width: 140px;
+  margin-top: 40px;
+}
 .tundra{
       margin-top: 10px;
 }
@@ -87,6 +92,9 @@ margin-top: -15px;
     }
 
 @media (max-width: 992px) {
+  .brand .col-md-3{
+  width: 100%;
+}
 
     .only-mobile{
       display: block;
