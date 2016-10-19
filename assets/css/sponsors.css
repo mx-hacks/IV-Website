@@ -37,6 +37,8 @@
 .tec img{
   min-height: 130px;
   margin-top:-20px;
+  width: 100%;
+  max-width: 345px;
 }
 .brand .col-md-3{
   width: 20%;
