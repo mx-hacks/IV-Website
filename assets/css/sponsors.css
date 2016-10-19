@@ -34,6 +34,9 @@
 .tec{
   padding-top: 64px;
 }
+.tec img{
+  min-height: 100px
+}
 .brand .col-md-3{
   width: 20%;
 }
