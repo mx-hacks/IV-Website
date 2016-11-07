@@ -19,9 +19,6 @@
     var plan = [{
       titulo:'Sábado 12 de noviembre',
       dias:[{
-        hora:'8:00 a.m - 9:00 a.m',
-        actividad:'Salida autobuses de Metro Auditorio y Zapata'
-      },{
         hora:'9:00 a.m - 10:00 a.m',
         actividad:'Inicia registro de participantes'
       },{
@@ -56,7 +53,7 @@
         actividad:'Desayuno',
       },{
         hora:'10:30 a.m - 1:30 p.m',
-        actividad:'Final hacking time!',
+        actividad:'Taller de pitch',
       },{
         hora:'1:30 p.m - 2:30 p.m',
         actividad:'Jurado',
