@@ -52,8 +52,8 @@
         hora:'9:30 a.m - 10:30 a.m',
         actividad:'Desayuno',
       },{
-        hora:'10:30 a.m - 1:30 p.m',
-        actividad:'Taller de pitch',
+        hora:'11:00 a.m - 12:00 p.m',
+        actividad:'Taller de Pitch',
       },{
         hora:'1:30 p.m - 2:30 p.m',
         actividad:'Jurado',

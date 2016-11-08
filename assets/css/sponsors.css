@@ -30,7 +30,11 @@
 .GE img{
       height: 216px;
 }
-
+.play_logo img{
+  width: 100%;
+  max-width: 160px;
+  margin-top: 50px;
+}
 .tec{
   padding-top: 64px;
 }
